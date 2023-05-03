@@ -8,22 +8,15 @@ namespace trabajoMayo
 {
     internal abstract class Figura
     {
-        private int lado, perimetro;
+        private List<int> lados;
+        private int perimetro;
+        private int altura;
         private double area;
-  
-        public Figura()
-        {
-            lado = 0;
-            perimetro = 0;
-            area = 0;
-        }
 
-        public Figura(int lado, int perimetro)
-        {
-            this.lado = lado;
-            this.perimetro = perimetro;
-            area = 0;
-        }
+        public List<int> Lados { get => lados; set => lados = value; }
+        public int Perimetro { get => perimetro; set => perimetro = value; }
+        public double Area { get => area; set => area = value; }
+        public int Altura { get => altura; set => altura = value; }
 
         public abstract double CalcularArea();
         public abstract int CalcularPerimetro();
