@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "trabajoMayo": {
+      "commandName": "Project",
+      "remoteDebugEnabled": true
+    }
+  }
+}
