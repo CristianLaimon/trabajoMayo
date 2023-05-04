@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Triangulo : Figura
+    internal class Triangulo : Figuras
     {
         private int altura;
-        private Triangulo triangulo1;
 
         public Triangulo() : base()
         {
             altura = 0;
-            Triangulo1 = new Triangulo();
         }
 
         public Triangulo(int lado, double area, double perimetro, int altura) : base(lado, area, perimetro)
@@ -23,21 +22,27 @@ namespace trabajoMayo.Figuras
         }
 
         public int Altura { get => altura; set => altura = value; }
-        internal Triangulo Triangulo1 { get => triangulo1; set => triangulo1 = value; }
 
         public override void CalcularArea()
         {
-            triangulo1.Area = (triangulo1.Lado * triangulo1.altura) / 2;
+            Area = (Lado * Altura) / 2;
         }
 
         public override void CalcularPerimetro()
         {
-            triangulo1.Perimetro = triangulo1.Lado * 3;
+            Perimetro = Lado * 3;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1)
+        public override void DibujarPoligono(PictureBox pictureBox1, int largo)
         {
-
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            Pen lapiz = new Pen(Color.Black, 3);
+            Point point1 = new Point(10, 10);
+            Point point2 = new Point(10+largo, 10+largo);
+            Point point3 = new Point(10+largo*2, 10+largo*2);
+            Point[] points = { point1, point2, point3 };
+            papel.DrawPolygon(lapiz, points);
         }
     }
 }

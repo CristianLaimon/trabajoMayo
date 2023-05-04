@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Rombo : Figura
+    internal class Rombo : Figuras
     {
         private int diagonalMayor;
         private int diagonalMenor;

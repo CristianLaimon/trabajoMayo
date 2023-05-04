@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Trapecio : Figura
+    internal class Trapecio : Figuras
     {
         private int baseMayor;
         private int baseMenor;

@@ -1,3 +1,5 @@
+using trabajoMayo.Figuras;
+
 namespace trabajoMayo
 {
     public partial class Form1 : Form
@@ -59,7 +61,8 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-
+                Triangulo triangulos = new Triangulo();
+                triangulos.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value);
             }
             if (radioButton2.Checked == true)
             {

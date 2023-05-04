@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Hexagono : Figura
+    internal class Hexagono : Figuras
     {
         private int apotema;
         private Hexagono hexagono1;
