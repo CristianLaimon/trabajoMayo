@@ -61,12 +61,27 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulos = new Triangulo();
-                triangulos.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value);
+                if (numericUpDown1.Value == 0)
+                {
+                    MessageBox.Show("Aun no ingresa la medida del lado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Triangulo triangulos = new Triangulo();
+                    triangulos.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
+                }
             }
             if (radioButton2.Checked == true)
             {
-
+                if (numericUpDown2.Value == 0 || numericUpDown3.Value == 0)
+                {
+                    MessageBox.Show("Aun no ingresa la medida de las diagonales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Rombo rombos = new Rombo();
+                    rombos.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                }
             }
             if (radioButton3.Checked == true)
             {

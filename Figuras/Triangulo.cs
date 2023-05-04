@@ -33,12 +33,12 @@ namespace trabajoMayo.Figuras
             Perimetro = Lado * 3;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo)
+        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = { new Point(10 + largo/2,10), new Point(10,10 + largo), new Point(10 + largo,10 + largo) };
+            Point[] points = { new Point(10 + largo / 2, 10), new Point(10, 10 + largo), new Point(10 + largo, 10 + largo) };
             papel.DrawPolygon(lapiz, points);
         }
 
