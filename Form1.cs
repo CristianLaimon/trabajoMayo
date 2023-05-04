@@ -71,8 +71,8 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Triangulo triangulos = new Triangulo();
-                    triangulos.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
+                    Triangulo triangulo = new Triangulo();
+                    triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
                 }
             }
             if (radioButton2.Checked == true)
@@ -83,8 +83,8 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Rombo rombos = new Rombo();
-                    rombos.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                    Rombo rombo = new Rombo();
+                    rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
                 }
             }
             if (radioButton3.Checked == true)
@@ -101,7 +101,15 @@ namespace trabajoMayo
             }
             if (radioButton4.Checked == true)
             {
-
+                if (numericUpDown6.Value == 0)
+                {
+                    MessageBox.Show("Aun no ingresa la medida del lado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Hexagono hexagono = new Hexagono();
+                    hexagono.DibujarPoligono(pictureBox1, (int)numericUpDown6.Value, 0, 0);
+                }
             }
         }
     }
