@@ -59,6 +59,10 @@ namespace trabajoMayo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
+            {
+                MessageBox.Show("Aun no selecciona una figura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (radioButton1.Checked == true)
             {
                 if (numericUpDown1.Value == 0)
@@ -85,7 +89,15 @@ namespace trabajoMayo
             }
             if (radioButton3.Checked == true)
             {
-
+                if (numericUpDown4.Value == 0 || numericUpDown5.Value == 0)
+                {
+                    MessageBox.Show("Aun no ingresa la medida de las bases", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Trapecio trapecio = new Trapecio();
+                    trapecio.DibujarPoligono(pictureBox1, 0, (int)numericUpDown4.Value, (int)numericUpDown5.Value);
+                }
             }
             if (radioButton4.Checked == true)
             {
