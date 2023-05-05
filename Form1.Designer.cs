@@ -176,7 +176,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(55, 36);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            125,
+            200,
             0,
             0,
             0});
@@ -188,6 +188,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label5
             // 
@@ -299,7 +300,7 @@
             this.numericUpDown3.Location = new System.Drawing.Point(122, 84);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown3.Maximum = new decimal(new int[] {
-            124,
+            200,
             0,
             0,
             0});
@@ -311,6 +312,7 @@
             0,
             0,
             0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -322,7 +324,7 @@
             this.numericUpDown2.Location = new System.Drawing.Point(122, 36);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            125,
+            200,
             0,
             0,
             0});
@@ -334,6 +336,7 @@
             0,
             0,
             0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label7
             // 
@@ -418,7 +421,7 @@
             this.numericUpDown4.Location = new System.Drawing.Point(96, 40);
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown4.Maximum = new decimal(new int[] {
-            250,
+            200,
             0,
             0,
             0});
@@ -430,6 +433,7 @@
             0,
             0,
             0});
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // numericUpDown5
             // 
@@ -441,7 +445,7 @@
             this.numericUpDown5.Location = new System.Drawing.Point(96, 84);
             this.numericUpDown5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown5.Maximum = new decimal(new int[] {
-            249,
+            200,
             0,
             0,
             0});
@@ -453,6 +457,7 @@
             0,
             0,
             0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // label16
             // 
@@ -499,7 +504,7 @@
             this.numericUpDown6.Location = new System.Drawing.Point(55, 36);
             this.numericUpDown6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown6.Maximum = new decimal(new int[] {
-            125,
+            200,
             0,
             0,
             0});
@@ -511,6 +516,7 @@
             0,
             0,
             0});
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // label18
             // 
@@ -567,6 +573,7 @@
             this.button1.Text = "Mostrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button1_KeyPress);
             // 
             // pictureBox1
             // 

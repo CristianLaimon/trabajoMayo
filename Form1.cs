@@ -59,6 +59,19 @@ namespace trabajoMayo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DeterminarFigura();
+        }
+
+        private void button1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (Char)Keys.Enter)
+            {
+                DeterminarFigura();
+            }
+        }
+
+        private void DeterminarFigura()
+        {
             if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
             {
                 MessageBox.Show("Aun no selecciona una figura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -113,6 +126,39 @@ namespace trabajoMayo
             }
         }
 
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+        }
 
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
+
+        private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
     }
 }
