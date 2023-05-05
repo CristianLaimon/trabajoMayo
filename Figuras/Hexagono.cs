@@ -37,8 +37,12 @@ namespace trabajoMayo.Figuras
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = { new Point(10 + (largo / 2), 10), new Point(10, 10 + (largo / 2)), new Point(10 + (largo / 2), 10 + largo), 
-                new Point(10 + (3 * largo / 2), 10 + largo), new Point(10 + (2 * largo), 10 + (largo / 2)), new Point(10 + (3 * largo / 2), 10) };
+            Point[] points = {  new Point(10 + (largo / 2), 10), 
+                                new Point(10 , 10 + (largo / 2)), 
+                                new Point(10 + (largo / 2), 10 + largo), 
+                                new Point(10 + (3 * largo / 2), 10 + largo), 
+                                new Point(10 + (2 * largo), 10 + (largo / 2)), 
+                                new Point(10 + (3 * largo / 2), 10) };
             papel.DrawPolygon(lapiz, points);
         }
     }
