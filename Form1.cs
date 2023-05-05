@@ -86,6 +86,7 @@ namespace trabajoMayo
                 {
                     Triangulo triangulo = new Triangulo();
                     triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
+                    triangulo.CalcularArea();
                 }
             }
             if (radioButton2.Checked == true)

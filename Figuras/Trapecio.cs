@@ -46,7 +46,7 @@ namespace trabajoMayo.Figuras
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (baseMayor / 4), 10),  //No se respeta la medida de la base mayor, se está aumentando en un 1/5 al dibujarse del valor original.
+            Point[] points = {  new Point(10 + (baseMayor / 4), 10),  //En ningun momento se está usando baseMenor. Será necesario usarlo pedírselo al usuario si el trapecio será uno regular?
                                 new Point(10 , 10 + (baseMayor / 2)), 
                                 new Point(10 + baseMayor, 10 + (baseMayor / 2)), 
                                 new Point(10 + (3 * baseMayor/4), 10) };
