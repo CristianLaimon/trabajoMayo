@@ -37,6 +37,7 @@ namespace trabajoMayo.Figuras
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
             Point[] points = {  new Point(10 + (largo / 2), 10), 
                                 new Point(10, 10 + largo), 
