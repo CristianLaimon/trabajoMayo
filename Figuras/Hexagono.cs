@@ -33,7 +33,7 @@ namespace trabajoMayo.Figuras
             Area = Perimetro * Apotema / 2;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)
+        public override void DibujarPoligono(PictureBox pictureBox1, int largo)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();

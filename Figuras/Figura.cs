@@ -55,6 +55,11 @@ namespace trabajoMayo.Figuras
 
         }
 
+        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado)
+        {
+
+        }
+
         public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
         {
 
