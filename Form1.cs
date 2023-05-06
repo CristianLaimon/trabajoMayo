@@ -86,7 +86,10 @@ namespace trabajoMayo
                 {
                     Triangulo triangulo = new Triangulo();
                     triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
-                    triangulo.CalcularArea();
+                    triangulo.CalcularArea((int)numericUpDown1.Value, 0, 0);
+                    triangulo.CalcularPerimetro((int)numericUpDown1.Value, 0, 0);
+                    label5.Text = triangulo.Perimetro.ToString();
+                    label4.Text = triangulo.Area.ToString(("0. ##"));
                 }
             }
             if (radioButton2.Checked == true)
@@ -99,6 +102,9 @@ namespace trabajoMayo
                 {
                     Rombo rombo = new Rombo();
                     rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                    rombo.CalcularArea(0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                    label8.Text = rombo.Area.ToString();
+                    //rombo.CalcularPerimetro();
                 }
             }
             if (radioButton3.Checked == true)

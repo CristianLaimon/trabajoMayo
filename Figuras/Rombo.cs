@@ -26,17 +26,17 @@ namespace trabajoMayo.Figuras
         public int DiagonalMayor { get => diagonalMayor; set => diagonalMayor = value; }
         public int DiagonalMenor { get => diagonalMenor; set => diagonalMenor = value; }
 
-        public override void CalcularArea()
+        public override void CalcularArea(int x, int diagonalMayor, int diagonalMenor)
         {
             Area = (diagonalMayor * diagonalMenor) / 2;
         }
 
-        public override void CalcularPerimetro()
-        {
-            Perimetro = Lado * 4;
-        }
+        //public override void CalcularPerimetro(int lado, int x, int y)
+        //{
+        //    Perimetro = lado * 4;
+        //}
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int diagonalMayor, int diagonalMenor)
+        public override void DibujarPoligono(PictureBox pictureBox1, int lado, int diagonalMayor, int diagonalMenor)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();

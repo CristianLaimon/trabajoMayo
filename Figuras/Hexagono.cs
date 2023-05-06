@@ -22,14 +22,14 @@ namespace trabajoMayo.Figuras
 
         public int Apotema { get => apotema; set => apotema = value; }
 
-        public override void CalcularArea()
-        {
-            Area = Perimetro * apotema / 2;
-        }
+        //public override void CalcularArea()
+        //{
+        //    Area = Perimetro * apotema / 2;
+        //}
 
-        public override void CalcularPerimetro()
+        public override void CalcularPerimetro(int lado, int x, int y)
         {
-            Perimetro = Lado * 6;
+            Perimetro = lado * 6;
         }
 
         public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)

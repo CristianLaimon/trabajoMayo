@@ -9,7 +9,7 @@ namespace trabajoMayo.Figuras
 {
     internal class Triangulo : Figuras
     {
-        private int altura;
+        private double altura;
 
         public Triangulo() : base()
         {
@@ -21,27 +21,28 @@ namespace trabajoMayo.Figuras
             this.altura = altura;
         }
 
-        public int Altura { get => altura; set => altura = value; }
+        public double Altura { get => altura; set => altura = value; }
 
-        public override void CalcularArea()
+        public override void CalcularArea(int lado, int x, int y)
         {
-            Area = (Lado * Altura) / 2;
+            Altura = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado/2), 2)));
+            Area = (lado * Altura) / 2;
         }
 
-        public override void CalcularPerimetro()
+        public override void CalcularPerimetro(int lado, int x, int y)
         {
-            Perimetro = Lado * 3;
+            Perimetro = lado * 3;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)
+        public override void DibujarPoligono(PictureBox pictureBox1, int lado, int x, int y)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (largo / 2), 10), 
-                                new Point(10, 10 + largo), 
-                                new Point(10 + largo, 10 + largo) };
+            Point[] points = {  new Point(10 + (lado / 2), 10), 
+                                new Point(10, 10 + lado), 
+                                new Point(10 + lado, 10 + lado) };
             papel.DrawPolygon(lapiz, points);
         }
 

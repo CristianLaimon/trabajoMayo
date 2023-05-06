@@ -30,17 +30,17 @@ namespace trabajoMayo.Figuras
         public double Area { get => area; set => area = value; }
         public double Perimetro { get => perimetro; set => perimetro = value; }
 
-        public virtual void CalcularArea()
+        public virtual void CalcularArea(int lado, int lado1, int lado2)
         {
 
         }
 
-        public virtual void CalcularPerimetro()
+        public virtual void CalcularPerimetro(int lado, int lado1, int lado2)
         {
 
         }
 
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int largo, int diagonalMayor, int diagonalMenor)
+        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
         {
 
         }
