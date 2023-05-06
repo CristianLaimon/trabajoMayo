@@ -40,7 +40,7 @@ namespace trabajoMayo.Figuras
             Perimetro = baseMayor + baseMenor + (Lado * 2);
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int baseMayor, int baseMenor)
+        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int baseMayor, int baseMenor, int altura)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();

@@ -40,9 +40,15 @@ namespace trabajoMayo.Figuras
 
         }
 
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int largo, int diagonalMayor, int diagonalMenor)
+        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado2, int lado3)
         {
 
         }
-    }
+
+        public virtual void DibujarPoligono(PictureBox pictreBox1, int lado, int lado2, int lado3, int lado4)
+        {
+
+        }
+
+    } 
 }
