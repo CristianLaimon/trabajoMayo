@@ -70,6 +70,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -372,7 +376,7 @@
             0,
             0,
             0});
-            this.numericUpDownTrapecioAltura.Location = new System.Drawing.Point(98, 96);
+            this.numericUpDownTrapecioAltura.Location = new System.Drawing.Point(84, 96);
             this.numericUpDownTrapecioAltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDownTrapecioAltura.Maximum = new decimal(new int[] {
             125,
@@ -380,7 +384,7 @@
             0,
             0});
             this.numericUpDownTrapecioAltura.Name = "numericUpDownTrapecioAltura";
-            this.numericUpDownTrapecioAltura.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDownTrapecioAltura.Size = new System.Drawing.Size(75, 23);
             this.numericUpDownTrapecioAltura.TabIndex = 0;
             this.numericUpDownTrapecioAltura.Value = new decimal(new int[] {
             125,
@@ -604,18 +608,59 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(601, 461);
+            this.label23.Location = new System.Drawing.Point(558, 470);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(206, 15);
             this.label23.TabIndex = 3;
             this.label23.Text = "Hecho por Diana Sesma y Kristan Ruiz";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(300, 406);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Arriba";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(249, 435);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Izquierda";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(300, 464);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Abajo";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(348, 435);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Derecha";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(774, 396);
+            this.ClientSize = new System.Drawing.Size(776, 494);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox5);
@@ -695,5 +740,9 @@
         private Label label23;
         private NumericUpDown numericUpDownTrapecioAltura;
         private Label label24;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }

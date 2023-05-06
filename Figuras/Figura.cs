@@ -60,17 +60,12 @@ namespace trabajoMayo.Figuras
 
         }
 
-        public virtual void CalcularPerimetro()
-        {
-
-        }
-
         public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
         {
 
         }
 
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2, int lado3)
+        public virtual void MoverFigura(string direccion, int cuanto)
         {
 
         }

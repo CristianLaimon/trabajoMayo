@@ -180,5 +180,10 @@ namespace trabajoMayo
             button1.Focus();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
