@@ -85,7 +85,7 @@ namespace trabajoMayo
                 else
                 {
                     Triangulo triangulo = new Triangulo();
-                    triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
+                    triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value);
                     triangulo.CalcularArea((int)numericUpDown1.Value);
                     triangulo.CalcularPerimetro((int)numericUpDown1.Value);
                     label5.Text = triangulo.Perimetro.ToString("0. ##");
@@ -107,7 +107,7 @@ namespace trabajoMayo
                     else
                     {
                         Rombo rombo = new Rombo();
-                        rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        rombo.DibujarPoligono(pictureBox1, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
                         rombo.CalcularArea((int)numericUpDown2.Value, (int)numericUpDown3.Value);
                         label8.Text = rombo.Area.ToString("0. ##");
                         rombo.CalcularPerimetro((int)numericUpDown2.Value, (int)numericUpDown3.Value);
@@ -136,7 +136,7 @@ namespace trabajoMayo
                 else
                 {
                     Hexagono hexagono = new Hexagono();
-                    hexagono.DibujarPoligono(pictureBox1, (int)numericUpDown6.Value, 0, 0);
+                    hexagono.DibujarPoligono(pictureBox1, (int)numericUpDown6.Value);
                     hexagono.CalcularPerimetro((int)numericUpDown6.Value);
                     label19.Text = hexagono.Perimetro.ToString("0. ##");
                     hexagono.CalcularArea((int)numericUpDown6.Value);
