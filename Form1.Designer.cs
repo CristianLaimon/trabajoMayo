@@ -50,6 +50,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownTrapecioAltura = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,8 +70,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.numericUpDownTrapecioAltura = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -77,12 +77,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrapecioAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrapecioAltura)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -380,6 +380,38 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Trapecio";
             // 
+            // numericUpDownTrapecioAltura
+            // 
+            this.numericUpDownTrapecioAltura.Increment = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDownTrapecioAltura.Location = new System.Drawing.Point(96, 119);
+            this.numericUpDownTrapecioAltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDownTrapecioAltura.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDownTrapecioAltura.Name = "numericUpDownTrapecioAltura";
+            this.numericUpDownTrapecioAltura.Size = new System.Drawing.Size(86, 27);
+            this.numericUpDownTrapecioAltura.TabIndex = 10;
+            this.numericUpDownTrapecioAltura.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(9, 121);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(52, 20);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Altura:";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -458,7 +490,7 @@
             this.numericUpDown5.Size = new System.Drawing.Size(86, 27);
             this.numericUpDown5.TabIndex = 2;
             this.numericUpDown5.Value = new decimal(new int[] {
-            100,
+            40,
             0,
             0,
             0});
@@ -594,43 +626,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(640, 461);
+            this.label23.Location = new System.Drawing.Point(601, 461);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(261, 20);
             this.label23.TabIndex = 3;
             this.label23.Text = "Hecho por Diana Sesma y Kristan Ruiz";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(4, 121);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 20);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "Altura:";
-            // 
-            // numericUpDownTrapecioAltura
-            // 
-            this.numericUpDownTrapecioAltura.Increment = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDownTrapecioAltura.Location = new System.Drawing.Point(96, 119);
-            this.numericUpDownTrapecioAltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericUpDownTrapecioAltura.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.numericUpDownTrapecioAltura.Name = "numericUpDownTrapecioAltura";
-            this.numericUpDownTrapecioAltura.Size = new System.Drawing.Size(86, 27);
-            this.numericUpDownTrapecioAltura.TabIndex = 10;
-            this.numericUpDownTrapecioAltura.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
             // 
             // Form1
             // 
@@ -660,13 +660,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrapecioAltura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrapecioAltura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

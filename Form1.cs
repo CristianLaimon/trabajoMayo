@@ -116,7 +116,8 @@ namespace trabajoMayo
                 else
                 {
                     Trapecio trapecio = new Trapecio();
-                    trapecio.DibujarPoligono(pictureBox1, 0, (int)numericUpDown4.Value, (int)numericUpDown5.Value);
+                    trapecio.DibujarPoligono(pictureBox1, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                    trapecio. CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
                 }
             }
             if (radioButton4.Checked == true)

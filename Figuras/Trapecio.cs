@@ -22,7 +22,7 @@ namespace trabajoMayo.Figuras
         public Trapecio(int lado, double area, double perimetro, int baseMayor, int baseMenor, int altura) : base(lado, area, perimetro)
         {
             this.baseMayor = baseMayor;
-            this.baseMayor = baseMenor;
+            this.baseMenor = baseMenor;
             this.altura = altura;
         }
 
@@ -30,27 +30,36 @@ namespace trabajoMayo.Figuras
         public int BaseMenor { get => baseMenor; set => baseMenor = value; }
         public int Altura { get => altura; set => altura = value; }
 
-        //public override void CalcularArea(int altura, int baseMayor, int baseMenor)
-        //{
-        //    Area = ((baseMayor + baseMenor) / 2) * altura;
-        //}
-
-        //public override void CalcularPerimetro() //
-        //{
-        //    Perimetro = baseMayor + baseMenor + (Lado * 2);
-        //}
-
-        public override void DibujarPoligono(PictureBox pictureBox1, int largo, int baseMayor, int baseMenor, int altura)
+        public override void CalcularArea(int altura, int baseMayor, int baseMenor)
         {
-            Graphics papel;
-            papel = pictureBox1.CreateGraphics();
-            papel.Clear(Color.FromArgb(191, 205, 219));
-            Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (baseMayor / 4), 10),  //En ningun momento se está usando baseMenor. Será necesario usarlo pedírselo al usuario si el trapecio será uno regular?
-                                new Point(10 , 10 + (baseMayor / 2)), 
-                                new Point(10 + baseMayor, 10 + (baseMayor / 2)), 
-                                new Point(10 + (3 * baseMayor/4), 10) };
-            papel.DrawPolygon(lapiz, points);
+            Area = ((baseMayor + baseMenor) / 2) * altura;
+        }
+
+        public override void CalcularPerimetro(int baseMayor, int baseMenor, int altura) 
+        {
+            int algo = (int)Math.Sqrt(Math.Pow(((10 + baseMayor / 2 + baseMenor / 2) - (10 + baseMayor)) , 2) + Math.Pow(((10) - 10 + altura) , 2));
+
+            Perimetro = baseMayor + baseMenor + (Lado * 2);
+        }
+
+        public override void DibujarPoligono(PictureBox pictureBox1, int baseMayor, int baseMenor, int altura) //Base menor no puede ser más grande que base mayor.
+        {
+            if (baseMayor >= baseMenor)
+            {
+                Graphics papel;
+                papel = pictureBox1.CreateGraphics();
+                papel.Clear(Color.FromArgb(191, 205, 219));
+                Pen lapiz = new Pen(Color.Black, 2);
+                Point[] points = {  new Point(10, 10 + altura),
+                                    new Point(10 + baseMayor, 10 + altura),
+                                    new Point(10 + baseMayor/2 + baseMenor/2, 10),
+                                    new Point(10 + baseMayor/2 - baseMenor/2, 10) };
+                papel.DrawPolygon(lapiz, points);
+            }
+            else
+            {
+                MessageBox.Show("Error, la base menor es más grande que la mayor, intenta con una medida más pequeña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
