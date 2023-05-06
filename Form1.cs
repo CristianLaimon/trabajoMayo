@@ -110,7 +110,7 @@ namespace trabajoMayo
                         rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
                         rombo.CalcularArea((int)numericUpDown2.Value, (int)numericUpDown3.Value);
                         label8.Text = rombo.Area.ToString("0. ##");
-                        rombo.CalcularPerimetro(0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        rombo.CalcularPerimetro((int)numericUpDown2.Value, (int)numericUpDown3.Value);
                         label9.Text = rombo.Perimetro.ToString("0. ##");
                     }
                 }
@@ -137,6 +137,10 @@ namespace trabajoMayo
                 {
                     Hexagono hexagono = new Hexagono();
                     hexagono.DibujarPoligono(pictureBox1, (int)numericUpDown6.Value, 0, 0);
+                    hexagono.CalcularPerimetro((int)numericUpDown6.Value);
+                    label19.Text = hexagono.Perimetro.ToString("0. ##");
+                    hexagono.CalcularArea((int)numericUpDown6.Value);
+                    label18.Text = hexagono.Area.ToString("0. ##");
                 }
             }
         }

@@ -31,7 +31,7 @@ namespace trabajoMayo.Figuras
             Area = (diagonalMayor * diagonalMenor) / 2;
         }
 
-        public override void CalcularPerimetro(int lado, int diagonalMayor, int diagonalMenor)
+        public override void CalcularPerimetro(int diagonalMayor, int diagonalMenor)
         {
             double lados = Math.Sqrt(Math.Pow((diagonalMenor/2),2) + Math.Pow((diagonalMayor/2),2));
             Perimetro = lados * 4;

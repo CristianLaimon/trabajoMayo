@@ -35,12 +35,17 @@ namespace trabajoMayo.Figuras
 
         }
 
+        public virtual void CalcularArea(int lado, int lado1)
+        {
+
+        }
+
         public virtual void CalcularPerimetro(int lado)
         {
 
         }
 
-        public virtual void CalcularArea(int lado, int lado1)
+        public virtual void CalcularPerimetro(int lado, int lado1)
         {
 
         }

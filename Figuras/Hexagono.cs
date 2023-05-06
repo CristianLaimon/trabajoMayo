@@ -8,7 +8,7 @@ namespace trabajoMayo.Figuras
 {
     internal class Hexagono : Figuras
     {
-        private int apotema;
+        private double apotema;
 
         public Hexagono() : base()
         {
@@ -20,16 +20,17 @@ namespace trabajoMayo.Figuras
             this.apotema = apotema;
         }
 
-        public int Apotema { get => apotema; set => apotema = value; }
+        public double Apotema { get => apotema; set => apotema = value; }
 
-        //public override void CalcularArea()
-        //{
-        //    Area = Perimetro * apotema / 2;
-        //}
-
-        public override void CalcularPerimetro(int lado, int x, int y)
+        public override void CalcularPerimetro(int lado)
         {
             Perimetro = lado * 6;
+        }
+
+        public override void CalcularArea(int lado)
+        {
+            Apotema = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado / 2), 2)));
+            Area = Perimetro * Apotemaca / 2;
         }
 
         public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)
