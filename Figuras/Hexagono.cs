@@ -30,7 +30,7 @@ namespace trabajoMayo.Figuras
         public override void CalcularArea(int lado)
         {
             Apotema = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado / 2), 2)));
-            Area = Perimetro * Apotemaca / 2;
+            Area = Perimetro * Apotema / 2;
         }
 
         public override void DibujarPoligono(PictureBox pictureBox1, int largo, int x, int y)

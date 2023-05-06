@@ -140,7 +140,7 @@ namespace trabajoMayo
                     hexagono.CalcularPerimetro((int)numericUpDown6.Value);
                     label19.Text = hexagono.Perimetro.ToString("0. ##");
                     hexagono.CalcularArea((int)numericUpDown6.Value);
-                    label18.Text = hexagono.Area.ToString("0. ##");
+                    label18.Text = hexagono.Apotema.ToString("0. ##");
                 }
             }
         }
