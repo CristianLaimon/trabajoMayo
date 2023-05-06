@@ -86,9 +86,9 @@ namespace trabajoMayo
                 {
                     Triangulo triangulo = new Triangulo();
                     triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value, 0, 0);
-                    triangulo.CalcularArea((int)numericUpDown1.Value, 0, 0);
-                    triangulo.CalcularPerimetro((int)numericUpDown1.Value, 0, 0);
-                    label5.Text = triangulo.Perimetro.ToString();
+                    triangulo.CalcularArea((int)numericUpDown1.Value);
+                    triangulo.CalcularPerimetro((int)numericUpDown1.Value);
+                    label5.Text = triangulo.Perimetro.ToString("0. ##");
                     label4.Text = triangulo.Area.ToString(("0. ##"));
                 }
             }
@@ -100,11 +100,19 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Rombo rombo = new Rombo();
-                    rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
-                    rombo.CalcularArea(0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
-                    label8.Text = rombo.Area.ToString();
-                    //rombo.CalcularPerimetro();
+                    if (numericUpDown3.Value > numericUpDown2.Value)
+                    {
+                        MessageBox.Show("La diagonal menor, no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        Rombo rombo = new Rombo();
+                        rombo.DibujarPoligono(pictureBox1, 0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        rombo.CalcularArea((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        label8.Text = rombo.Area.ToString("0. ##");
+                        rombo.CalcularPerimetro(0, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        label9.Text = rombo.Perimetro.ToString("0. ##");
+                    }
                 }
             }
             if (radioButton3.Checked == true)

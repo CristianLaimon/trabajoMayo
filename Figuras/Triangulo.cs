@@ -23,13 +23,13 @@ namespace trabajoMayo.Figuras
 
         public double Altura { get => altura; set => altura = value; }
 
-        public override void CalcularArea(int lado, int x, int y)
+        public override void CalcularArea(int lado)
         {
             Altura = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado/2), 2)));
             Area = (lado * Altura) / 2;
         }
 
-        public override void CalcularPerimetro(int lado, int x, int y)
+        public override void CalcularPerimetro(int lado)
         {
             Perimetro = lado * 3;
         }

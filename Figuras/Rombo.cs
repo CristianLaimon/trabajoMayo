@@ -26,14 +26,14 @@ namespace trabajoMayo.Figuras
         public int DiagonalMayor { get => diagonalMayor; set => diagonalMayor = value; }
         public int DiagonalMenor { get => diagonalMenor; set => diagonalMenor = value; }
 
-        public override void CalcularArea(int x, int diagonalMayor, int diagonalMenor)
+        public override void CalcularArea(int diagonalMayor, int diagonalMenor)
         {
             Area = (diagonalMayor * diagonalMenor) / 2;
         }
 
         public override void CalcularPerimetro(int lado, int diagonalMayor, int diagonalMenor)
         {
-            double lados = Math.Sqrt(Math.Pow((diagonalMenor/2),2));
+            double lados = Math.Sqrt(Math.Pow((diagonalMenor/2),2) + Math.Pow((diagonalMayor/2),2));
             Perimetro = lados * 4;
         }
 
