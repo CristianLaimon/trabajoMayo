@@ -30,17 +30,17 @@ namespace trabajoMayo.Figuras
         public int BaseMenor { get => baseMenor; set => baseMenor = value; }
         public int Altura { get => altura; set => altura = value; }
 
-        public override void CalcularArea(int altura, int baseMayor, int baseMenor)
-        {
-            Area = ((baseMayor + baseMenor) / 2) * altura;
-        }
+        //public override void CalcularArea(int altura, int baseMayor, int baseMenor)
+        //{
+        //    Area = ((baseMayor + baseMenor) / 2) * altura;
+        //}
 
-        public override void CalcularPerimetro(int baseMayor, int baseMenor, int altura) 
-        {
-            int algo = (int)Math.Sqrt(Math.Pow(((10 + baseMayor / 2 + baseMenor / 2) - (10 + baseMayor)) , 2) + Math.Pow(((10) - 10 + altura) , 2));
+        //public override void CalcularPerimetro(int baseMayor, int baseMenor, int altura) 
+        //{
+        //    int algo = (int)Math.Sqrt(Math.Pow(((10 + baseMayor / 2 + baseMenor / 2) - (10 + baseMayor)) , 2) + Math.Pow(((10) - 10 + altura) , 2));
 
-            Perimetro = baseMayor + baseMenor + (Lado * 2);
-        }
+        //    Perimetro = baseMayor + baseMenor + (Lado * 2);
+        //}
 
         public override void DibujarPoligono(PictureBox pictureBox1, int baseMayor, int baseMenor, int altura) //Base menor no puede ser más grande que base mayor.
         {

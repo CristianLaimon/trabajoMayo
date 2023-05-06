@@ -125,7 +125,7 @@ namespace trabajoMayo
                 {
                     Trapecio trapecio = new Trapecio();
                     trapecio.DibujarPoligono(pictureBox1, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
-                    trapecio. CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                    //trapecio. CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
                 }
             }
             if (radioButton4.Checked == true)
@@ -141,7 +141,7 @@ namespace trabajoMayo
                     hexagono.CalcularPerimetro((int)numericUpDown6.Value);
                     label19.Text = hexagono.Perimetro.ToString("0. ##");
                     hexagono.CalcularArea((int)numericUpDown6.Value);
-                    label18.Text = hexagono.Apotema.ToString("0. ##");
+                    label18.Text = hexagono.Area.ToString("0. ##");
                 }
             }
         }
