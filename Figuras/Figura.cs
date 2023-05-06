@@ -40,12 +40,22 @@ namespace trabajoMayo.Figuras
 
         }
 
+        public virtual void CalcularArea(int lado, int lado2, int lado3)
+        {
+
+        }
+
         public virtual void CalcularPerimetro(int lado)
         {
 
         }
 
         public virtual void CalcularPerimetro(int lado, int lado1)
+        {
+
+        }
+
+        public virtual void CalcularPerimetro(int lado, int lado2, int lado3)
         {
 
         }
@@ -60,19 +70,16 @@ namespace trabajoMayo.Figuras
 
         }
 
+        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
+        {
+
+        }
         public virtual void CalcularPerimetro()
         {
 
         }
 
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
-        {
 
-        }
 
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2, int lado3)
-        {
-
-        }
     } 
 }

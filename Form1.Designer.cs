@@ -52,8 +52,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.numericUpDownTrapecioAltura = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelTrapecioArea = new System.Windows.Forms.Label();
+            this.labelTrapecioPerimetro = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
@@ -363,8 +363,8 @@
             // 
             this.groupBox4.Controls.Add(this.numericUpDownTrapecioAltura);
             this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.labelTrapecioArea);
+            this.groupBox4.Controls.Add(this.labelTrapecioPerimetro);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.numericUpDown4);
@@ -390,7 +390,7 @@
             this.numericUpDownTrapecioAltura.Location = new System.Drawing.Point(89, 128);
             this.numericUpDownTrapecioAltura.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numericUpDownTrapecioAltura.Maximum = new decimal(new int[] {
-            200,
+            180,
             0,
             0,
             0});
@@ -402,6 +402,7 @@
             0,
             0,
             0});
+            this.numericUpDownTrapecioAltura.ValueChanged += new System.EventHandler(this.numericUpDownTrapecioAltura_ValueChanged);
             // 
             // label24
             // 
@@ -412,23 +413,23 @@
             this.label24.TabIndex = 9;
             this.label24.Text = "Altura:";
             // 
-            // label12
+            // labelTrapecioArea
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(112, 192);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "label12";
+            this.labelTrapecioArea.AutoSize = true;
+            this.labelTrapecioArea.Location = new System.Drawing.Point(112, 192);
+            this.labelTrapecioArea.Name = "labelTrapecioArea";
+            this.labelTrapecioArea.Size = new System.Drawing.Size(58, 20);
+            this.labelTrapecioArea.TabIndex = 8;
+            this.labelTrapecioArea.Text = "label12";
             // 
-            // label13
+            // labelTrapecioPerimetro
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(112, 227);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 20);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "label13";
+            this.labelTrapecioPerimetro.AutoSize = true;
+            this.labelTrapecioPerimetro.Location = new System.Drawing.Point(112, 227);
+            this.labelTrapecioPerimetro.Name = "labelTrapecioPerimetro";
+            this.labelTrapecioPerimetro.Size = new System.Drawing.Size(58, 20);
+            this.labelTrapecioPerimetro.TabIndex = 7;
+            this.labelTrapecioPerimetro.Text = "label13";
             // 
             // label14
             // 
@@ -458,7 +459,7 @@
             this.numericUpDown4.Location = new System.Drawing.Point(96, 40);
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown4.Maximum = new decimal(new int[] {
-            200,
+            600,
             0,
             0,
             0});
@@ -482,7 +483,7 @@
             this.numericUpDown5.Location = new System.Drawing.Point(96, 84);
             this.numericUpDown5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown5.Maximum = new decimal(new int[] {
-            200,
+            600,
             0,
             0,
             0});
@@ -697,8 +698,8 @@
         private Label label6;
         private Button button1;
         private GroupBox groupBox4;
-        private Label label12;
-        private Label label13;
+        private Label labelTrapecioArea;
+        private Label labelTrapecioPerimetro;
         private Label label14;
         private Label label15;
         private NumericUpDown numericUpDown4;

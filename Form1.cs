@@ -19,8 +19,8 @@ namespace trabajoMayo
             label5.Text = "";
             label8.Text = "";
             label9.Text = "";
-            label12.Text = "";
-            label14.Text = "";
+            labelTrapecioArea.Text = "";
+            labelTrapecioPerimetro.Text = "";
             label18.Text = "";
             label19.Text = "";
         }
@@ -124,8 +124,18 @@ namespace trabajoMayo
                 else
                 {
                     Trapecio trapecio = new Trapecio();
-                    trapecio.DibujarPoligono(pictureBox1, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
-                    trapecio. CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                    if ((int)numericUpDown4.Value >= (int)numericUpDown5.Value)
+                    {
+                        trapecio.DibujarPoligono(pictureBox1, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                        trapecio.CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                        trapecio.CalcularArea((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                        labelTrapecioArea.Text = trapecio.Area.ToString();
+                        labelTrapecioPerimetro.Text = trapecio.Perimetro.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, la base menor es más grande que la mayor, intenta con una medida más pequeña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             if (radioButton4.Checked == true)
@@ -176,6 +186,12 @@ namespace trabajoMayo
         }
 
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            button1.Focus();
+
+        }
+
+        private void numericUpDownTrapecioAltura_ValueChanged(object sender, EventArgs e)
         {
             button1.Focus();
 
