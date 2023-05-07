@@ -5,6 +5,9 @@ namespace trabajoMayo
     public partial class Form1 : Form
     {
         static Triangulo triangulo;
+        static Rombo rombo;
+        static Trapecio trapecio;
+        static Hexagono hexagono;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +29,9 @@ namespace trabajoMayo
             label18.Text = "";
             label19.Text = "";
             triangulo = new Triangulo();
+            rombo = new Rombo();
+            trapecio = new Trapecio();
+            hexagono = new Hexagono();
         }
 
         private void MostrarPanel(int groupBoxElegido)
@@ -54,12 +60,36 @@ namespace trabajoMayo
             {
                 triangulo.MoverArriba(pictureBox1);
             }
+            if (radioButton2.Checked == true)
+            {
+                rombo.MoverArriba(pictureBox1);
+            }
+            if (radioButton3.Checked == true)
+            {
+                trapecio.MoverArriba(pictureBox1);
+            }
+            if (radioButton4.Checked == true)
+            {
+                hexagono.MoverArriba(pictureBox1);
+            }
         }
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 triangulo.MoverAbajo(pictureBox1);
+            }
+            if (radioButton2.Checked == true)
+            {
+                rombo.MoverAbajo(pictureBox1);
+            }
+            if (radioButton3.Checked == true)
+            {
+                trapecio.MoverAbajo(pictureBox1);
+            }
+            if (radioButton4.Checked == true)
+            {
+                hexagono.MoverAbajo(pictureBox1);
             }
         }
 
@@ -69,6 +99,18 @@ namespace trabajoMayo
             {
                 triangulo.MoverIzquierda(pictureBox1);
             }
+            if (radioButton2.Checked == true)
+            {
+                rombo.MoverIzquierda(pictureBox1);
+            }
+            if (radioButton3.Checked == true)
+            {
+                trapecio.MoverIzquierda(pictureBox1);
+            }
+            if (radioButton4.Checked == true)
+            {
+                hexagono.MoverIzquierda(pictureBox1);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -76,6 +118,18 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 triangulo.MoverDerecha(pictureBox1);
+            }
+            if (radioButton2.Checked == true)
+            {
+                rombo.MoverDerecha(pictureBox1);
+            }
+            if (radioButton3.Checked == true)
+            {
+                trapecio.MoverDerecha(pictureBox1);
+            }
+            if (radioButton4.Checked == true)
+            {
+                hexagono.MoverDerecha(pictureBox1);
             }
         }
 
@@ -104,12 +158,10 @@ namespace trabajoMayo
         #region DeterminarFigura
         private void DeterminarFigura()
         {
-
             if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
             {
                 MessageBox.Show("Aun no selecciona una figura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
 
             if (radioButton1.Checked == true)
             {
@@ -119,7 +171,6 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Triangulo triangulo = new Triangulo();
                     triangulo.Lado = (int)numericUpDown1.Value;
                     triangulo.DibujarPoligono(pictureBox1);
                     triangulo.CalcularArea();
@@ -128,7 +179,6 @@ namespace trabajoMayo
                     label4.Text = triangulo.Area.ToString(("0. ##"));
                 }
             }
-
 
             if (radioButton2.Checked == true)
             {
@@ -144,7 +194,6 @@ namespace trabajoMayo
                     }
                     else
                     {
-                        Rombo rombo = new Rombo();
                         rombo.DiagonalMayor = (int)numericUpDown2.Value;
                         rombo.DiagonalMenor = (int)numericUpDown3.Value;
                         rombo.DibujarPoligono(pictureBox1);
@@ -156,7 +205,6 @@ namespace trabajoMayo
                 }
             }
 
-
             if (radioButton3.Checked == true)
             {
                 if (numericUpDown4.Value == 0 || numericUpDown5.Value == 0)
@@ -165,7 +213,6 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Trapecio trapecio = new Trapecio();
                     trapecio.BaseMayor = (int)numericUpDown4.Value;
                     trapecio.BaseMenor = (int)numericUpDown5.Value;
                     trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
@@ -185,7 +232,6 @@ namespace trabajoMayo
                 }
             }
 
-
             if (radioButton4.Checked == true)
             {
                 if (numericUpDown6.Value == 0)
@@ -194,7 +240,6 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Hexagono hexagono = new Hexagono();
                     hexagono.Lado = (int)numericUpDown6.Value;
                     hexagono.DibujarPoligono(pictureBox1);
                     hexagono.CalcularPerimetro();
@@ -203,8 +248,6 @@ namespace trabajoMayo
                     label18.Text = hexagono.Area.ToString("0. ##");
                 }
             }
-
-        
         }
 #endregion
 
@@ -250,7 +293,6 @@ namespace trabajoMayo
         }
         #endregion
 
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
@@ -260,11 +302,35 @@ namespace trabajoMayo
                     {
                         triangulo.MoverArriba(pictureBox1);
                     }
+                    if (radioButton2.Checked == true)
+                    {
+                        rombo.MoverArriba(pictureBox1);
+                    }
+                    if (radioButton3.Checked == true)
+                    {
+                        trapecio.MoverArriba(pictureBox1);
+                    }
+                    if (radioButton4.Checked == true)
+                    {
+                        hexagono.MoverArriba(pictureBox1);
+                    }
                     break;
                 case Keys.Down:
                     if (radioButton1.Checked == true)
                     {
                         triangulo.MoverAbajo(pictureBox1);
+                    }
+                    if (radioButton2.Checked == true)
+                    {
+                        rombo.MoverAbajo(pictureBox1);
+                    }
+                    if (radioButton3.Checked == true)
+                    {
+                        trapecio.MoverAbajo(pictureBox1);
+                    }
+                    if (radioButton4.Checked == true)
+                    {
+                        hexagono.MoverAbajo(pictureBox1);
                     }
                     break;
                 case Keys.Left:
@@ -272,17 +338,59 @@ namespace trabajoMayo
                     {
                         triangulo.MoverIzquierda(pictureBox1);
                     }
+                    if (radioButton2.Checked == true)
+                    {
+                        rombo.MoverIzquierda(pictureBox1);
+                    }
+                    if (radioButton3.Checked == true)
+                    {
+                        trapecio.MoverIzquierda(pictureBox1);
+                    }
+                    if (radioButton4.Checked == true)
+                    {
+                        hexagono.MoverIzquierda(pictureBox1);
+                    }
                     break;
                 case Keys.Right:
                     if (radioButton1.Checked == true)
                     {
                         triangulo.MoverDerecha(pictureBox1);
                     }
+                    if (radioButton2.Checked == true)
+                    {
+                        rombo.MoverDerecha(pictureBox1);
+                    }
+                    if (radioButton3.Checked == true)
+                    {
+                        trapecio.MoverDerecha(pictureBox1);
+                    }
+                    if (radioButton4.Checked == true)
+                    {
+                        hexagono.MoverDerecha(pictureBox1);
+                    }
                     break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(2);
+        }
 
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(3);
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(4);
+        }
+
+        private void radioButton4_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(5);
+        }
     }
 }
