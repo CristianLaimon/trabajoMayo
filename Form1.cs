@@ -28,10 +28,15 @@ namespace trabajoMayo
             label13.Text = "";
             label18.Text = "";
             label19.Text = "";
-            triangulo = new Triangulo();
-            rombo = new Rombo();
-            trapecio = new Trapecio();
-            hexagono = new Hexagono();
+            triangulo = new();
+            rombo = new();
+            trapecio = new();
+            hexagono = new();
+            radioButton1.Tag = triangulo;
+            radioButton2.Tag = rombo;
+            radioButton3.Tag = trapecio;
+            radioButton4.Tag = hexagono;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -149,100 +154,95 @@ namespace trabajoMayo
         #region DeterminarFigura
         private void DeterminarFigura()
         {
-            if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
+            bool figuraSeleccionada = false;
+
+            foreach (RadioButton radioButton in groupBox1.Controls.OfType<RadioButton>())
+            {
+                if (radioButton.Checked && radioButton.Tag is Figura figura)
+                {
+                    figuraSeleccionada = true;
+                    
+                    switch(figura)
+                    {
+                        case Triangulo:
+                        {
+                                triangulo.Lado = (int)numericUpDown1.Value;
+
+                                if (triangulo.Validarse())
+                            {
+                                triangulo.DibujarPoligono(pictureBox1);
+                                triangulo.CalcularArea();
+                                triangulo.CalcularPerimetro();
+                                label5.Text = triangulo.Perimetro.ToString("0. ##");
+                                label4.Text = triangulo.Area.ToString(("0. ##"));
+                                triangulo.Creado = true;
+                            }
+
+                            break;
+                        }
+
+                        case Rombo:
+                        {
+                                rombo.DiagonalMayor = (int)numericUpDown2.Value;
+                                rombo.DiagonalMenor = (int)numericUpDown3.Value;
+                                if (rombo.Validarse())
+                            {
+                                rombo.DibujarPoligono(pictureBox1);
+                                rombo.CalcularArea();
+                                rombo.CalcularPerimetro();
+                                label9.Text = rombo.Perimetro.ToString("0. ##");
+                                label8.Text = rombo.Area.ToString(("0. ##"));
+                                rombo.Creado = true;
+                            }
+                            break;
+                        }
+
+                        case Trapecio:
+                        {
+                                trapecio.BaseMayor = (int)numericUpDownTrapecioBaseMayor.Value;
+                                trapecio.BaseMenor = (int)numericUpDownTrapecioBaseMenor.Value;
+                                trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
+
+                                if (trapecio.Validarse())
+                            {
+                                trapecio.DibujarPoligono(pictureBox1);
+                                trapecio.CalcularArea();
+                                trapecio.CalcularPerimetro();
+                                label13.Text = trapecio.Perimetro.ToString("0. ##");
+                                label12.Text = trapecio.Area.ToString(("0. ##"));
+                                trapecio.Creado = true;
+                            }
+                            break;
+                        }
+
+                        case Hexagono:
+                        {
+                                hexagono.Lado = (int)numericUpDown6.Value;
+
+                                if (hexagono.Validarse())
+                            {
+                                hexagono.DibujarPoligono(pictureBox1);
+                                hexagono.CalcularArea();
+                                hexagono.CalcularPerimetro();
+                                label17.Text = hexagono.Perimetro.ToString("0. ##");
+                                label16.Text = hexagono.Area.ToString(("0. ##"));
+                                hexagono.Creado = true;
+                            }
+                            break;
+                        }
+
+                    }
+
+                    break;
+                }
+            }
+
+            if (!figuraSeleccionada)
             {
                 MessageBox.Show("Aun no selecciona una figura", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            if (radioButton1.Checked == true)
-            {
-                if (numericUpDown1.Value == 0)
-                {
-                    MessageBox.Show("Aun no ingresa la medida del lado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    triangulo.Lado = (int)numericUpDown1.Value;
-                    triangulo.DibujarPoligono(pictureBox1);
-                    triangulo.CalcularArea();
-                    triangulo.CalcularPerimetro();
-                    label5.Text = triangulo.Perimetro.ToString("0. ##");
-                    label4.Text = triangulo.Area.ToString(("0. ##"));
-                    triangulo.Creado = true;
-                }
-            }
 
-            if (radioButton2.Checked == true)
-            {
-                if (numericUpDown2.Value == 0 || numericUpDown3.Value == 0)
-                {
-                    MessageBox.Show("Aun no ingresa la medida de las diagonales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    if (numericUpDown3.Value > numericUpDown2.Value)
-                    {
-                        MessageBox.Show("La diagonal menor no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    {
-                        rombo.DiagonalMayor = (int)numericUpDown2.Value;
-                        rombo.DiagonalMenor = (int)numericUpDown3.Value;
-                        rombo.DibujarPoligono(pictureBox1);
-                        rombo.CalcularArea();
-                        label8.Text = rombo.Area.ToString("0. ##");
-                        rombo.CalcularPerimetro();
-                        label9.Text = rombo.Perimetro.ToString("0. ##");
-                        rombo.Creado = true;
-                    }
-                }
-            }
-
-            if (radioButton3.Checked == true)
-            {
-                if (numericUpDown4.Value == 0 || numericUpDown5.Value == 0)
-                {
-                    MessageBox.Show("Aun no ingresa la medida de las bases", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    trapecio.BaseMayor = (int)numericUpDown4.Value;
-                    trapecio.BaseMenor = (int)numericUpDown5.Value;
-                    trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
-
-                    if ((int)numericUpDown4.Value >= (int)numericUpDown5.Value)
-                    {
-                        trapecio.DibujarPoligono(pictureBox1);
-                        trapecio.CalcularPerimetro();
-                        trapecio.CalcularArea();
-                        label12.Text = trapecio.Area.ToString("0. ##");
-                        label13.Text = trapecio.Perimetro.ToString("0. ##");
-                        trapecio.Creado = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("La base maenor no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-
-            if (radioButton4.Checked == true)
-            {
-                if (numericUpDown6.Value == 0)
-                {
-                    MessageBox.Show("Aun no ingresa la medida del lado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    hexagono.Lado = (int)numericUpDown6.Value;
-                    hexagono.DibujarPoligono(pictureBox1);
-                    hexagono.CalcularPerimetro();
-                    hexagono.CalcularArea();
-                    label19.Text = hexagono.Perimetro.ToString("0. ##");
-                    label18.Text = hexagono.Area.ToString("0. ##");
-                    hexagono.Creado = true;
-                }
-            }
         }
         #endregion
 

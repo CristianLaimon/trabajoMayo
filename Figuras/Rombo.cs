@@ -161,5 +161,17 @@ namespace trabajoMayo.Figuras
                 }
             }
         }
+
+        public override bool Validarse()
+        {
+            if(DiagonalMayor == 0 || DiagonalMenor == 0)
+            {
+                MessageBox.Show("No puede ser 0", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+
+        }
     }
 }

@@ -160,5 +160,15 @@ namespace trabajoMayo.Figuras
                 }
             }
         }
+
+        public override bool Validarse()
+        {
+            if(Lado < 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

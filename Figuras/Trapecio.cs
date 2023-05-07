@@ -167,5 +167,17 @@ namespace trabajoMayo.Figuras
                 }
             }
         }
+
+        public override bool Validarse()
+        {
+            if( baseMenor > baseMayor)
+            {
+                MessageBox.Show("La base menor no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+
+            return true;
+        }
     }
 }

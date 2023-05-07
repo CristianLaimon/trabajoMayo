@@ -154,5 +154,15 @@ namespace trabajoMayo.Figuras
             }
         }
 
+        public override bool Validarse()
+        {
+            if (Lado == 0)
+            {
+                MessageBox.Show("Aun no ingresa la medida del lado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
     }
 }

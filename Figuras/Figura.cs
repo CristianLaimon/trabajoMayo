@@ -28,11 +28,11 @@ namespace trabajoMayo.Figuras
         public double Area { get; set; }
         public double Perimetro { get ; set ; }
         public bool Creado { get; set; }
+        public Point[] Puntos { get; set; }
 
         public abstract double CalcularArea();
-        
-        public Point[] Puntos {  get; set;  }
 
+        public abstract bool Validarse();
         public abstract double CalcularPerimetro();
         
         public abstract void DibujarPoligono(PictureBox pictureBox1);
