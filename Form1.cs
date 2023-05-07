@@ -166,9 +166,9 @@ namespace trabajoMayo
                     {
                         case Triangulo:
                         {
-                                triangulo.Lado = (int)numericUpDown1.Value;
+                            triangulo.Lado = (int)numericUpDown1.Value;
 
-                                if (triangulo.Validarse())
+                            if (triangulo.Validarse())
                             {
                                 triangulo.DibujarPoligono(pictureBox1);
                                 triangulo.CalcularArea();
@@ -183,9 +183,10 @@ namespace trabajoMayo
 
                         case Rombo:
                         {
-                                rombo.DiagonalMayor = (int)numericUpDown2.Value;
-                                rombo.DiagonalMenor = (int)numericUpDown3.Value;
-                                if (rombo.Validarse())
+                            rombo.DiagonalMayor = (int)numericUpDown2.Value;
+                            rombo.DiagonalMenor = (int)numericUpDown3.Value;
+
+                            if (rombo.Validarse())
                             {
                                 rombo.DibujarPoligono(pictureBox1);
                                 rombo.CalcularArea();
@@ -199,11 +200,11 @@ namespace trabajoMayo
 
                         case Trapecio:
                         {
-                                trapecio.BaseMayor = (int)numericUpDownTrapecioBaseMayor.Value;
-                                trapecio.BaseMenor = (int)numericUpDownTrapecioBaseMenor.Value;
-                                trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
+                            trapecio.BaseMayor = (int)numericUpDownTrapecioBaseMayor.Value;
+                            trapecio.BaseMenor = (int)numericUpDownTrapecioBaseMenor.Value;
+                            trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
 
-                                if (trapecio.Validarse())
+                             if (trapecio.Validarse())
                             {
                                 trapecio.DibujarPoligono(pictureBox1);
                                 trapecio.CalcularArea();
@@ -212,14 +213,15 @@ namespace trabajoMayo
                                 label12.Text = trapecio.Area.ToString(("0. ##"));
                                 trapecio.Creado = true;
                             }
+
                             break;
                         }
 
                         case Hexagono:
                         {
-                                hexagono.Lado = (int)numericUpDown6.Value;
+                             hexagono.Lado = (int)numericUpDown6.Value;
 
-                                if (hexagono.Validarse())
+                             if (hexagono.Validarse())
                             {
                                 hexagono.DibujarPoligono(pictureBox1);
                                 hexagono.CalcularArea();
@@ -228,6 +230,7 @@ namespace trabajoMayo
                                 label16.Text = hexagono.Area.ToString(("0. ##"));
                                 hexagono.Creado = true;
                             }
+
                             break;
                         }
 
