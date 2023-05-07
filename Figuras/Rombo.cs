@@ -51,5 +51,7 @@ namespace trabajoMayo.Figuras
                                 new Point(10 + diagonalMenor, 10 + (diagonalMayor / 2)) };
             papel.DrawPolygon(lapiz, points);
         }
+
+
     }
 }

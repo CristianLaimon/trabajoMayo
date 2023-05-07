@@ -27,6 +27,8 @@ namespace trabajoMayo.Figuras
         public double Perimetro { get ; set ; }
 
         public abstract double CalcularArea();
+        
+        public Point[] Puntos {  get; set;  }
 
         public abstract double CalcularPerimetro();
         

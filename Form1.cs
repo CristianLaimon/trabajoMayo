@@ -4,10 +4,12 @@ namespace trabajoMayo
 {
     public partial class Form1 : Form
     {
+        static Triangulo triangulo;
         public Form1()
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -23,6 +25,7 @@ namespace trabajoMayo
             labelTrapecioPerimetro.Text = "";
             label18.Text = "";
             label19.Text = "";
+            triangulo = new Triangulo();
         }
 
         private void MostrarPanel(int groupBoxElegido)
@@ -49,16 +52,13 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
                 triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
                 triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
             }
         }
@@ -67,7 +67,6 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
                 triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
             }
         }
@@ -76,7 +75,6 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
                 triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
             }
         }
@@ -182,7 +180,7 @@ namespace trabajoMayo
                     }
                     else
                     {
-                        MessageBox.Show("Error, la base menor es más grande que la mayor, intenta con una medida más pequeña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error, la base menor es mï¿½s grande que la mayor, intenta con una medida mï¿½s pequeï¿½a", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
