@@ -8,11 +8,11 @@ namespace trabajoMayo
         static Rombo rombo;
         static Trapecio trapecio;
         static Hexagono hexagono;
+
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,13 +34,6 @@ namespace trabajoMayo
             hexagono = new Hexagono();
         }
 
-        private void MostrarPanel(int groupBoxElegido)
-        {
-            groupBox2.Visible = groupBoxElegido == 2;
-            groupBox3.Visible = groupBoxElegido == 3;
-            groupBox4.Visible = groupBoxElegido == 4;
-            groupBox5.Visible = groupBoxElegido == 5;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             DeterminarFigura();
@@ -52,6 +45,26 @@ namespace trabajoMayo
             {
                 DeterminarFigura();
             }
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(2);
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(3);
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(4);
+        }
+
+        private void radioButton4_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MostrarPanel(5);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -133,28 +146,6 @@ namespace trabajoMayo
             }
         }
 
-        #region EventosRadioButtons
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            MostrarPanel(2);
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            MostrarPanel(3);
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            MostrarPanel(4);
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            MostrarPanel(5);
-        }
-        #endregion
-
         #region DeterminarFigura
         private void DeterminarFigura()
         {
@@ -227,7 +218,7 @@ namespace trabajoMayo
                     }
                     else
                     {
-                        MessageBox.Show("Error, la base menor es m�s grande que la mayor, intenta con una medida m�s peque�a", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error, la base menor es mas grande que la mayor, intenta con una medida mas pequeña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -243,15 +234,24 @@ namespace trabajoMayo
                     hexagono.Lado = (int)numericUpDown6.Value;
                     hexagono.DibujarPoligono(pictureBox1);
                     hexagono.CalcularPerimetro();
-                    label19.Text = hexagono.Perimetro.ToString("0. ##");
                     hexagono.CalcularArea();
+                    label19.Text = hexagono.Perimetro.ToString("0. ##");
                     label18.Text = hexagono.Area.ToString("0. ##");
                 }
             }
         }
-#endregion
+        #endregion
+
+        private void MostrarPanel(int groupBoxElegido)
+        {
+            groupBox2.Visible = groupBoxElegido == 2;
+            groupBox3.Visible = groupBoxElegido == 3;
+            groupBox4.Visible = groupBoxElegido == 4;
+            groupBox5.Visible = groupBoxElegido == 5;
+        }
 
         #region EnterFocusNumericUpDownEvents
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             button1.Focus();
@@ -291,6 +291,7 @@ namespace trabajoMayo
             button1.Focus();
 
         }
+
         #endregion
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -371,26 +372,6 @@ namespace trabajoMayo
                     break;
             }
             return base.ProcessCmdKey(ref msg, keyData);
-        }
-
-        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            MostrarPanel(2);
-        }
-
-        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
-        {
-            MostrarPanel(3);
-        }
-
-        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
-        {
-            MostrarPanel(4);
-        }
-
-        private void radioButton4_CheckedChanged_1(object sender, EventArgs e)
-        {
-            MostrarPanel(5);
         }
     }
 }

@@ -24,7 +24,11 @@ namespace trabajoMayo.Figuras
 
         public double Apotema { get => apotema; set => apotema = value; }
 
-        public override double CalcularPerimetro() => Lado * 6;
+        public override double CalcularPerimetro()
+        {
+            Perimetro = Lado * 6;
+            return Perimetro;
+        }
 
         public override double CalcularArea()
         {
