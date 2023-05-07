@@ -199,15 +199,10 @@ namespace trabajoMayo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int contador = 0;
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                if (contador >= 0)
-                {
-                    triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
-                    contador++;
-                }
+                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
             }
         }
 
