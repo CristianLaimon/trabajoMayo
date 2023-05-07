@@ -15,12 +15,14 @@ namespace trabajoMayo.Figuras
         {
             diagonalMayor = 0;
             diagonalMenor = 0;
+            Puntos = new Point[4];
         }
 
         public Rombo(int lado, double area, double perimetro, int diagonalMayor, int diagonalMenor) : base(lado, area, perimetro)
         {
             this.diagonalMayor = diagonalMayor;
             this.diagonalMenor = diagonalMenor;
+            Puntos = new Point[4];
         }
 
         public int DiagonalMayor { get => diagonalMayor; set => diagonalMayor = value; }
