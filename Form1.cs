@@ -199,7 +199,43 @@ namespace trabajoMayo
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int contador = 0;
+            if (radioButton1.Checked == true)
+            {
+                Triangulo triangulo = new Triangulo();
+                if (contador >= 0)
+                {
+                    triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
+                    contador++;
+                }
+            }
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Triangulo triangulo = new Triangulo();
+                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Triangulo triangulo = new Triangulo();
+                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Triangulo triangulo = new Triangulo();
+                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+            }
         }
     }
 }

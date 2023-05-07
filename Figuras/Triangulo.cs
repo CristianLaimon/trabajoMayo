@@ -46,51 +46,51 @@ namespace trabajoMayo.Figuras
             papel.DrawPolygon(lapiz, points);
         }
 
-        public override void MoverArriba(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public override void MoverArriba(PictureBox pictureBox1, int lado)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10),
-                                new Point(10, 10 + lado),
-                                new Point(10 + lado, 10 + lado) };
+            Point[] points = {  new Point(10 + (lado / 2), 10 - 5),
+                                new Point(10, 10 + lado - 5),
+                                new Point(10 + lado, 10 + lado - 5) };
             papel.DrawPolygon(lapiz, points);
         }
 
-        public override void MoverIzquierda(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public override void MoverIzquierda(PictureBox pictureBox1, int lado)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10),
-                                new Point(10, 10 + lado),
-                                new Point(10 + lado, 10 + lado) };
+            Point[] points = {  new Point(10 + (lado / 2) - 5, 10),
+                                new Point(10 - 5, 10 + lado),
+                                new Point(10 + lado - 5, 10 + lado) };
             papel.DrawPolygon(lapiz, points);
         }
 
-        public override void MoverAbajo(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public override void MoverAbajo(PictureBox pictureBox1, int lado)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10),
-                                new Point(10, 10 + lado),
-                                new Point(10 + lado, 10 + lado) };
+            Point[] points = {  new Point(10 + (lado / 2), 10 + 5),
+                                new Point(10, 10 + lado + 5),
+                                new Point(10 + lado, 10 + lado + 5) };
             papel.DrawPolygon(lapiz, points);
         }
 
-        public override void MoverDerecha(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public override void MoverDerecha(PictureBox pictureBox1, int lado)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10),
-                                new Point(10, 10 + lado),
-                                new Point(10 + lado, 10 + lado) };
+            Point[] points = {  new Point(10 + (lado / 2) + 5, 10),
+                                new Point(10 + 5, 10 + lado),
+                                new Point(10 + lado + 5, 10 + lado) };
             papel.DrawPolygon(lapiz, points);
         }
 

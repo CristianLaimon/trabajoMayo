@@ -75,25 +75,23 @@ namespace trabajoMayo.Figuras
 
 
         }
-        public virtual void CalcularPerimetro()
+
+        public virtual void MoverArriba(PictureBox pictureBox1, int lado)
         {
 
         }
 
-
-        public virtual void MoverArriba(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado)
         {
 
         }
-        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+
+        public virtual void MoverAbajo(PictureBox pictureBox1, int lado)
         {
 
         }
-        public virtual void MoverAbajo(PictureBox pictureBox1, int lado, string direccion, int cuanto)
-        {
 
-        }
-        public virtual void MoverDerecha(PictureBox pictureBox1, int lado, string direccion, int cuanto)
+        public virtual void MoverDerecha(PictureBox pictureBox1, int lado)
         {
 
         }
