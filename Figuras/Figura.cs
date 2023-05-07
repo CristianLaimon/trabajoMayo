@@ -30,6 +30,8 @@ namespace trabajoMayo.Figuras
         public double Area { get => area; set => area = value; }
         public double Perimetro { get => perimetro; set => perimetro = value; }
 
+        public Point[] Puntos {  get; set;  }
+
         public virtual void CalcularArea(int lado)
         {
 
@@ -76,22 +78,22 @@ namespace trabajoMayo.Figuras
 
         }
 
-        public virtual void MoverArriba(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverArriba(PictureBox pictureBox1, int lado)
         {
 
         }
 
-        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado)
         {
 
         }
 
-        public virtual void MoverAbajo(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverAbajo(PictureBox pictureBox1, int lado)
         {
 
         }
 
-        public virtual void MoverDerecha(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverDerecha(PictureBox pictureBox1, int lado)
         {
 
         }

@@ -4,6 +4,7 @@ namespace trabajoMayo
 {
     public partial class Form1 : Form
     {
+        static Triangulo triangulo;
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace trabajoMayo
             labelTrapecioPerimetro.Text = "";
             label18.Text = "";
             label19.Text = "";
+            triangulo = new Triangulo();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -84,7 +86,6 @@ namespace trabajoMayo
                 }
                 else
                 {
-                    Triangulo triangulo = new Triangulo();
                     triangulo.DibujarPoligono(pictureBox1, (int)numericUpDown1.Value);
                     triangulo.CalcularArea((int)numericUpDown1.Value);
                     triangulo.CalcularPerimetro((int)numericUpDown1.Value);
@@ -197,21 +198,18 @@ namespace trabajoMayo
 
         }
 
-        int cuanto = 0;
         private void button2_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
-                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
             }
         }
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
-                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
             }
         }
 
@@ -219,8 +217,7 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
-                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
             }
         }
 
@@ -228,8 +225,7 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                Triangulo triangulo = new Triangulo();
-                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
             }
         }
     }
