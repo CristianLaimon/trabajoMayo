@@ -24,8 +24,8 @@ namespace trabajoMayo
             label5.Text = "";
             label8.Text = "";
             label9.Text = "";
-            labelTrapecioArea.Text = "";
-            labelTrapecioPerimetro.Text = "";
+            label12.Text = "";
+            label13.Text = "";
             label18.Text = "";
             label19.Text = "";
             triangulo = new Triangulo();
@@ -222,8 +222,8 @@ namespace trabajoMayo
                         trapecio.DibujarPoligono(pictureBox1);
                         trapecio.CalcularPerimetro();
                         trapecio.CalcularArea();
-                        labelTrapecioArea.Text = trapecio.Area.ToString();
-                        labelTrapecioPerimetro.Text = trapecio.Perimetro.ToString();
+                        label12.Text = trapecio.Area.ToString("0. ##");
+                        label13.Text = trapecio.Perimetro.ToString("0. ##");
                     }
                     else
                     {
