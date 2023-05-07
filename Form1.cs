@@ -52,14 +52,14 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverArriba(pictureBox1);
             }
         }
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
-                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverAbajo(pictureBox1);
             }
         }
 
@@ -67,7 +67,7 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverIzquierda(pictureBox1);
             }
         }
 
@@ -75,7 +75,7 @@ namespace trabajoMayo
         {
             if (radioButton1.Checked == true)
             {
-                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverDerecha(pictureBox1);
             }
         }
 
@@ -258,25 +258,25 @@ namespace trabajoMayo
                 case Keys.Up:
                     if (radioButton1.Checked == true)
                     {
-                        triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
+                        triangulo.MoverArriba(pictureBox1);
                     }
                     break;
                 case Keys.Down:
                     if (radioButton1.Checked == true)
                     {
-                        triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+                        triangulo.MoverAbajo(pictureBox1);
                     }
                     break;
                 case Keys.Left:
                     if (radioButton1.Checked == true)
                     {
-                        triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
+                        triangulo.MoverIzquierda(pictureBox1);
                     }
                     break;
                 case Keys.Right:
                     if (radioButton1.Checked == true)
                     {
-                        triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+                        triangulo.MoverDerecha(pictureBox1);
                     }
                     break;
             }

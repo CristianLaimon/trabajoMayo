@@ -39,10 +39,12 @@ namespace trabajoMayo.Figuras
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Puntos[0] = new Point(10 + (diagonalMenor / 2), 10);
-            Puntos[1] = new Point(10, 10 + (diagonalMayor / 2));
-            Puntos[2] = new Point(10 + (diagonalMenor / 2), 10 + diagonalMayor);
-            Puntos[3] = new Point(10 + diagonalMenor, 10 + (diagonalMayor / 2));
+            Puntos[0] = new Point(10 + (Lado / 2), 10);
+            Puntos[1] = new Point(10, 10 + (Lado / 2));
+            Puntos[2] = new Point(10 + (Lado / 2), 10 + Lado);
+            Puntos[3] = new Point(10 + (3 * Lado / 2), 10 + Lado);
+            Puntos[4] = new Point(10 + (2 * Lado), 10 + (Lado / 2));
+            Puntos[5] = new Point(10 + (3 * Lado / 2), 10);
             papel.DrawPolygon(lapiz, Puntos);
         }
 
@@ -56,6 +58,8 @@ namespace trabajoMayo.Figuras
             Puntos[1].Y -= 40;
             Puntos[2].Y -= 40;
             Puntos[3].Y -= 40;
+            Puntos[4].Y -= 40;
+            Puntos[5].Y -= 40;
             papel.DrawPolygon(lapiz, Puntos);
         }
 
@@ -69,6 +73,8 @@ namespace trabajoMayo.Figuras
             Puntos[1].X -= 40;
             Puntos[2].X -= 40;
             Puntos[3].X -= 40;
+            Puntos[4].X -= 40;
+            Puntos[5].X -= 40;
             papel.DrawPolygon(lapiz, Puntos);
         }
 
@@ -82,6 +88,8 @@ namespace trabajoMayo.Figuras
             Puntos[1].Y += 40;
             Puntos[2].Y += 40;
             Puntos[3].Y += 40;
+            Puntos[4].Y += 40;
+            Puntos[5].Y += 40;
             papel.DrawPolygon(lapiz, Puntos);
         }
 
@@ -95,6 +103,8 @@ namespace trabajoMayo.Figuras
             Puntos[1].X += 40;
             Puntos[2].X += 40;
             Puntos[3].X += 40;
+            Puntos[4].X += 40;
+            Puntos[5].X += 40;
             papel.DrawPolygon(lapiz, Puntos);
         }
     }
