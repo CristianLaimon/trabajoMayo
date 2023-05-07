@@ -38,20 +38,5 @@ namespace trabajoMayo.Figuras
             Perimetro = lados * 4;
             return Perimetro;
         }
-
-        public override void DibujarPoligono(PictureBox pictureBox1)
-        {
-            Graphics papel;
-            papel = pictureBox1.CreateGraphics();
-            papel.Clear(Color.FromArgb(191, 205, 219));
-            Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (diagonalMenor/2), 10), 
-                                new Point(10 , 10 + (diagonalMayor / 2)), 
-                                new Point(10 + (diagonalMenor / 2), 10 + diagonalMayor), 
-                                new Point(10 + diagonalMenor, 10 + (diagonalMayor / 2)) };
-            papel.DrawPolygon(lapiz, points);
-        }
-
-
     }
 }

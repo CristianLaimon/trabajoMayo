@@ -44,13 +44,13 @@ namespace trabajoMayo.Figuras
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Puntos[0] = new Point(10 + (lado / 2), 10);
-            Puntos[1] = new Point(10, 10 + lado);
-            Puntos[2] = new Point(10 + lado, 10 + lado);
+            Puntos[0] = new Point(10 + (Lado / 2), 10);
+            Puntos[1] = new Point(10, 10 + Lado);
+            Puntos[2] = new Point(10 + Lado, 10 + Lado);
             papel.DrawPolygon(lapiz, Puntos);
         }
 
-        public override void MoverArriba(PictureBox pictureBox1, int lado)
+        public override void MoverArriba(PictureBox pictureBox1)
         {
 
             Graphics papel;
@@ -64,7 +64,7 @@ namespace trabajoMayo.Figuras
             papel.DrawPolygon(lapiz, Puntos);
         }
 
-        public override void MoverIzquierda(PictureBox pictureBox1, int lado)
+        public override void MoverIzquierda(PictureBox pictureBox1)
         {
 
             Graphics papel;
@@ -77,7 +77,7 @@ namespace trabajoMayo.Figuras
             papel.DrawPolygon(lapiz, Puntos);
         }
 
-        public override void MoverAbajo(PictureBox pictureBox1, int lado)
+        public override void MoverAbajo(PictureBox pictureBox1)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
@@ -90,7 +90,7 @@ namespace trabajoMayo.Figuras
         }
 
 
-        public override void MoverDerecha(PictureBox pictureBox1, int lado)
+        public override void MoverDerecha(PictureBox pictureBox1)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();

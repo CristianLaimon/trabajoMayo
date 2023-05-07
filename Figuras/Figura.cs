@@ -34,13 +34,13 @@ namespace trabajoMayo.Figuras
         
         public abstract void DibujarPoligono(PictureBox pictureBox1);
 
-        public abstract void MoverArriba(PictureBox pictureBox1, int lado);
+        public abstract void MoverArriba(PictureBox pictureBox1);
 
-        public abstract void MoverIzquierda(PictureBox pictureBox1, int lado);
+        public abstract void MoverIzquierda(PictureBox pictureBox1);
 
-        public abstract void MoverAbajo(PictureBox pictureBox1, int lado);
+        public abstract void MoverAbajo(PictureBox pictureBox1);
 
-        public abstract void MoverDerecha(PictureBox pictureBox1, int lado);
+        public abstract void MoverDerecha(PictureBox pictureBox1);
 
     } 
 }

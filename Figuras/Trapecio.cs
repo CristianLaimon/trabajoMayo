@@ -17,6 +17,7 @@ namespace trabajoMayo.Figuras
             baseMayor = 0;
             baseMenor = 0;
             altura = 0;
+            Puntos = new Point[4];
         }
 
         public Trapecio(int lado, double area, double perimetro, int baseMayor, int baseMenor, int altura) : base(lado, area, perimetro)
@@ -24,6 +25,7 @@ namespace trabajoMayo.Figuras
             this.baseMayor = baseMayor;
             this.baseMenor = baseMenor;
             this.altura = altura;
+            Puntos = new Point[4];
         }
 
         public int BaseMayor { get => baseMayor; set => baseMayor = value; }
@@ -45,19 +47,69 @@ namespace trabajoMayo.Figuras
             return Perimetro;
         }
 
-
-
-        public override void DibujarPoligono(PictureBox pictureBox1) 
+        public override void DibujarPoligono(PictureBox pictureBox1)
         {
-                Graphics papel;
-                papel = pictureBox1.CreateGraphics();
-                papel.Clear(Color.FromArgb(191, 205, 219));
-                Pen lapiz = new Pen(Color.Black, 2);
-                Point[] points = {  new Point(10, 10 + altura),
-                                    new Point(10 + baseMayor, 10 + altura),
-                                    new Point(10 + baseMayor/2 + baseMenor/2, 10),
-                                    new Point(10 + baseMayor/2 - baseMenor/2, 10) };
-                papel.DrawPolygon(lapiz, points);
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
+            Pen lapiz = new Pen(Color.Black, 2);
+            Puntos[0] = new Point(10, 10 + altura);
+            Puntos[1] = new Point(10 + baseMayor, 10 + altura);
+            Puntos[2] = new Point(10 + baseMayor / 2 + baseMenor / 2, 10);
+            Puntos[3] = new Point(10 + baseMayor / 2 - baseMenor / 2, 10);
+            papel.DrawPolygon(lapiz, Puntos);
+        }
+
+        public override void MoverArriba(PictureBox pictureBox1)
+        {
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
+            Pen lapiz = new Pen(Color.Black, 2);
+            Puntos[0].Y -= 40;
+            Puntos[1].Y -= 40;
+            Puntos[2].Y -= 40;
+            Puntos[3].Y -= 40;
+            papel.DrawPolygon(lapiz, Puntos);
+        }
+
+        public override void MoverIzquierda(PictureBox pictureBox1)
+        {
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
+            Pen lapiz = new Pen(Color.Black, 2);
+            Puntos[0].X -= 40;
+            Puntos[1].X -= 40;
+            Puntos[2].X -= 40;
+            Puntos[3].X -= 40;
+            papel.DrawPolygon(lapiz, Puntos);
+        }
+
+        public override void MoverAbajo(PictureBox pictureBox1)
+        {
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
+            Pen lapiz = new Pen(Color.Black, 2);
+            Puntos[0].Y += 40;
+            Puntos[1].Y += 40;
+            Puntos[2].Y += 40;
+            Puntos[3].Y += 40;
+            papel.DrawPolygon(lapiz, Puntos);
+        }
+
+        public override void MoverDerecha(PictureBox pictureBox1)
+        {
+            Graphics papel;
+            papel = pictureBox1.CreateGraphics();
+            papel.Clear(Color.FromArgb(191, 205, 219));
+            Pen lapiz = new Pen(Color.Black, 2);
+            Puntos[0].X += 40;
+            Puntos[1].X += 40;
+            Puntos[2].X += 40;
+            Puntos[3].X += 40;
+            papel.DrawPolygon(lapiz, Puntos);
         }
     }
 }
