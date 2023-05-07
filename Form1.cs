@@ -197,21 +197,21 @@ namespace trabajoMayo
 
         }
 
+        int cuanto = 0;
         private void button2_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
             }
         }
 
@@ -220,7 +220,7 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
             }
         }
 
@@ -229,7 +229,7 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+                triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
             }
         }
     }
