@@ -203,7 +203,13 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                int p = 0;
+                triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value, ref cuanto, ref p, ref p, ref p, ref p, ref p, ref p);
+            }
+            if (radioButton4.Checked == true)
+            {
+                //Hexagono hexagono = new Hexagono();
+                //hexagono.MoverArriba(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
             }
         }
         private void button4_Click(object sender, EventArgs e)
@@ -213,6 +219,11 @@ namespace trabajoMayo
                 Triangulo triangulo = new Triangulo();
                 triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
             }
+            if (radioButton4.Checked == true)
+            {
+                Hexagono hexagono = new Hexagono();
+                hexagono.MoverAbajo(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -220,7 +231,13 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 Triangulo triangulo = new Triangulo();
-                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+                int p = 0;
+                triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value, ref cuanto, ref p, ref p, ref p, ref p, ref p, ref p);
+            }
+            if (radioButton4.Checked == true)
+            {
+                //    Hexagono hexagono = new Hexagono();
+                //    hexagono.MoverIzquierda(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
             }
         }
 
@@ -230,6 +247,11 @@ namespace trabajoMayo
             {
                 Triangulo triangulo = new Triangulo();
                 triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value, ref cuanto);
+            }
+            if (radioButton4.Checked == true)
+            {
+                Hexagono hexagono = new Hexagono();
+                hexagono.MoverDerecha(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
             }
         }
     }

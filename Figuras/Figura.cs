@@ -76,12 +76,12 @@ namespace trabajoMayo.Figuras
 
         }
 
-        public virtual void MoverArriba(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverArriba(PictureBox pictureBox1, int lado, ref int cuanto, ref int x1, ref int y1, ref int x2, ref int y2, ref int x3, ref int y3)
         {
 
         }
 
-        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado, ref int cuanto)
+        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado, ref int cuanto, ref int x1, ref int y1, ref int x2, ref int y2, ref int x3, ref int y3)
         {
 
         }
