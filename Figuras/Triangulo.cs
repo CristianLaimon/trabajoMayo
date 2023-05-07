@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Triangulo : Figuras
+    internal class Triangulo : Figura
     {
         private double altura;
 
@@ -23,26 +23,28 @@ namespace trabajoMayo.Figuras
 
         public double Altura { get => altura; set => altura = value; }
 
-        public override void CalcularArea(int lado)
+        public override double CalcularArea()
         {
-            Altura = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado/2), 2)));
-            Area = (lado * Altura) / 2;
+            Altura = Math.Sqrt(Math.Pow(Lado, 2) - (Math.Pow((Lado /2), 2)));
+            Area = (Lado * Altura) / 2;
+            return Area;
         }
 
-        public override void CalcularPerimetro(int lado)
+        public override double CalcularPerimetro()
         {
-            Perimetro = lado * 3;
+            Perimetro = Lado * 3;
+            return Perimetro;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int lado)
+        public override void DibujarPoligono(PictureBox pictureBox1)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10), 
-                                new Point(10, 10 + lado), 
-                                new Point(10 + lado, 10 + lado) };
+            Point[] points = {  new Point(10 + (Lado / 2), 10), 
+                                new Point(10, 10 + Lado), 
+                                new Point(10 + Lado, 10 + Lado) };
             papel.DrawPolygon(lapiz, points);
         }
 
@@ -52,9 +54,9 @@ namespace trabajoMayo.Figuras
             papel = pictureBox1.CreateGraphics();
             papel.Clear(Color.FromArgb(191, 205, 219));
             Pen lapiz = new Pen(Color.Black, 2);
-            Point[] points = {  new Point(10 + (lado / 2), 10 - 5),
-                                new Point(10, 10 + lado - 5),
-                                new Point(10 + lado, 10 + lado - 5) };
+            Point[] points = {  new Point(10 + (Lado / 2), 10 - 5),
+                                new Point(10, 10 + Lado - 5),
+                                new Point(10 + Lado, 10 + Lado - 5) };
             papel.DrawPolygon(lapiz, points);
         }
 

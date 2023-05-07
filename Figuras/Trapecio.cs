@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Trapecio : Figuras
+    internal class Trapecio : Figura
     {
         private int baseMayor;
         private int baseMenor;
@@ -31,21 +31,23 @@ namespace trabajoMayo.Figuras
         public int Altura { get => altura; set => altura = value; }
 
 
-        public override void CalcularArea(int altura, int baseMayor, int baseMenor)
+        public override double CalcularArea()
         {
             Area = ((baseMayor + baseMenor) / 2) * altura;
+            return Area;
         }
 
-        public override void CalcularPerimetro(int baseMayor, int baseMenor, int altura)
+        public override double CalcularPerimetro()
         {
-            int algo = (int)Math.Sqrt(Math.Pow(((10 + baseMayor / 2 + baseMenor / 2) - (10 + baseMayor)), 2) + Math.Pow(((10) - 10 + altura), 2));
+            int ladoLateral = (int)Math.Sqrt(Math.Pow(((10 + baseMayor / 2 + baseMenor / 2) - (10 + baseMayor)), 2) + Math.Pow(((10) - 10 + altura), 2));
 
-            Perimetro = baseMayor + baseMenor + (Lado * 2);
+            Perimetro = baseMayor + baseMenor + (ladoLateral * 2);
+            return Perimetro;
         }
 
 
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int baseMayor, int baseMenor, int altura) //Base menor no puede ser más grande que base mayor.
+        public override void DibujarPoligono(PictureBox pictureBox1) 
         {
                 Graphics papel;
                 papel = pictureBox1.CreateGraphics();

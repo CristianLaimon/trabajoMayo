@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Hexagono : Figuras
+    internal class Hexagono : Figura
     {
         private double apotema;
 
@@ -22,15 +22,13 @@ namespace trabajoMayo.Figuras
 
         public double Apotema { get => apotema; set => apotema = value; }
 
-        public override void CalcularPerimetro(int lado)
-        {
-            Perimetro = lado * 6;
-        }
+        public override double CalcularPerimetro() => Lado * 6;
 
-        public override void CalcularArea(int lado)
+        public override double CalcularArea()
         {
-            Apotema = Math.Sqrt(Math.Pow(lado, 2) - (Math.Pow((lado / 2), 2)));
+            Apotema = Math.Sqrt(Math.Pow(Lado, 2) - (Math.Pow((Lado / 2), 2)));
             Area = Perimetro * Apotema / 2;
+            return Area;
         }
 
         public override void DibujarPoligono(PictureBox pictureBox1, int largo)

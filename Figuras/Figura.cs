@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Figuras
+    internal abstract class Figura
     {
         private int lado;
         private double area;
         private double perimetro;
 
-        public Figuras()
+        public Figura()
         {
             lado = 0;
             area = 0;
             perimetro = 0;
         }
 
-        public Figuras(int lado, double area, double perimetro)
+        public Figura(int lado, double area, double perimetro)
         {
             this.lado = lado;
             this.area = area;
@@ -30,71 +30,19 @@ namespace trabajoMayo.Figuras
         public double Area { get => area; set => area = value; }
         public double Perimetro { get => perimetro; set => perimetro = value; }
 
-        public virtual void CalcularArea(int lado)
-        {
+        public abstract double CalcularArea();
 
-        }
+        public abstract double CalcularPerimetro();
+        
+        public abstract void DibujarPoligono(PictureBox pictureBox1);
 
-        public virtual void CalcularArea(int lado, int lado1)
-        {
+        public abstract void Mover(PictureBox pictureBox1, int lado);
 
-        }
+        public abstract void MoverIzquierda(PictureBox pictureBox1, int lado);
 
-        public virtual void CalcularArea(int lado, int lado2, int lado3)
-        {
+        public abstract void MoverAbajo(PictureBox pictureBox1, int lado);
 
-        }
-
-        public virtual void CalcularPerimetro(int lado)
-        {
-
-        }
-
-        public virtual void CalcularPerimetro(int lado, int lado1)
-        {
-
-        }
-
-        public virtual void CalcularPerimetro(int lado, int lado2, int lado3)
-        {
-
-        }
-
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado)
-        {
-
-        }
-
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado2)
-        {
-
-        }
-
-        public virtual void DibujarPoligono(PictureBox pictureBox1, int lado, int lado1, int lado2)
-        {
-
-
-        }
-
-        public virtual void MoverArriba(PictureBox pictureBox1, int lado)
-        {
-
-        }
-
-        public virtual void MoverIzquierda(PictureBox pictureBox1, int lado)
-        {
-
-        }
-
-        public virtual void MoverAbajo(PictureBox pictureBox1, int lado)
-        {
-
-        }
-
-        public virtual void MoverDerecha(PictureBox pictureBox1, int lado)
-        {
-
-        }
+        public abstract void MoverDerecha(PictureBox pictureBox1, int lado);
 
     } 
 }

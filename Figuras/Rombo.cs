@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabajoMayo.Figuras
 {
-    internal class Rombo : Figuras
+    internal class Rombo : Figura
     {
         private int diagonalMayor;
         private int diagonalMenor;
@@ -26,18 +26,20 @@ namespace trabajoMayo.Figuras
         public int DiagonalMayor { get => diagonalMayor; set => diagonalMayor = value; }
         public int DiagonalMenor { get => diagonalMenor; set => diagonalMenor = value; }
 
-        public override void CalcularArea(int diagonalMayor, int diagonalMenor)
+        public override double CalcularArea()
         {
             Area = (diagonalMayor * diagonalMenor) / 2;
+            return Area;
         }
 
-        public override void CalcularPerimetro(int diagonalMayor, int diagonalMenor)
+        public override double CalcularPerimetro()
         {
             double lados = Math.Sqrt(Math.Pow((diagonalMenor/2),2) + Math.Pow((diagonalMayor/2),2));
             Perimetro = lados * 4;
+            return Perimetro;
         }
 
-        public override void DibujarPoligono(PictureBox pictureBox1, int diagonalMayor, int diagonalMenor)
+        public override void DibujarPoligono(PictureBox pictureBox1)
         {
             Graphics papel;
             papel = pictureBox1.CreateGraphics();

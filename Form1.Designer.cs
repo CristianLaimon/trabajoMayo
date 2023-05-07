@@ -112,7 +112,6 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Hexagono";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -124,7 +123,6 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Trapecio";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -136,7 +134,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Rombo";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -148,7 +145,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Triangulo";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
