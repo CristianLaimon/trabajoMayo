@@ -228,5 +228,58 @@ namespace trabajoMayo
                 triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Up:
+                    if (radioButton1.Checked == true)
+                    {
+                        triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
+                    }
+                    break;
+                case Keys.Down:
+                    if (radioButton1.Checked == true)
+                    {
+                        triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+                    }
+                    break;
+                case Keys.Left:
+                    if (radioButton1.Checked == true)
+                    {
+                        triangulo.MoverIzquierda(pictureBox1, (int)numericUpDown1.Value);
+                    }
+                    break;
+                case Keys.Right:
+                    if (radioButton1.Checked == true)
+                    {
+                        triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+                    }
+                    break;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            this.Focus();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
