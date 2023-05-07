@@ -204,12 +204,22 @@ namespace trabajoMayo
             {
                 triangulo.MoverArriba(pictureBox1, (int)numericUpDown1.Value);
             }
+            if (radioButton4.Checked == true)
+            {
+                //Hexagono hexagono = new Hexagono();
+                //hexagono.MoverArriba(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
+            }
         }
         private void button4_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
             {
                 triangulo.MoverAbajo(pictureBox1, (int)numericUpDown1.Value);
+            }
+            if (radioButton4.Checked == true)
+            {
+                Hexagono hexagono = new Hexagono();
+                hexagono.MoverAbajo(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
             }
         }
 
@@ -226,6 +236,11 @@ namespace trabajoMayo
             if (radioButton1.Checked == true)
             {
                 triangulo.MoverDerecha(pictureBox1, (int)numericUpDown1.Value);
+            }
+            if (radioButton4.Checked == true)
+            {
+                Hexagono hexagono = new Hexagono();
+                hexagono.MoverDerecha(pictureBox1, (int)numericUpDown6.Value, ref cuanto);
             }
         }
 
