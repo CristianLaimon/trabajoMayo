@@ -168,6 +168,7 @@ namespace trabajoMayo
                     triangulo.CalcularPerimetro();
                     label5.Text = triangulo.Perimetro.ToString("0. ##");
                     label4.Text = triangulo.Area.ToString(("0. ##"));
+                    triangulo.Creado = true;
                 }
             }
 
@@ -181,7 +182,7 @@ namespace trabajoMayo
                 {
                     if (numericUpDown3.Value > numericUpDown2.Value)
                     {
-                        MessageBox.Show("La diagonal menor, no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("La diagonal menor no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -192,6 +193,7 @@ namespace trabajoMayo
                         label8.Text = rombo.Area.ToString("0. ##");
                         rombo.CalcularPerimetro();
                         label9.Text = rombo.Perimetro.ToString("0. ##");
+                        rombo.Creado = true;
                     }
                 }
             }
@@ -215,10 +217,11 @@ namespace trabajoMayo
                         trapecio.CalcularArea();
                         label12.Text = trapecio.Area.ToString("0. ##");
                         label13.Text = trapecio.Perimetro.ToString("0. ##");
+                        trapecio.Creado = true;
                     }
                     else
                     {
-                        MessageBox.Show("Error, la base menor es mas grande que la mayor, intenta con una medida mas pequeña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("La base maenor no puede valer mas que la mayor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -237,6 +240,7 @@ namespace trabajoMayo
                     hexagono.CalcularArea();
                     label19.Text = hexagono.Perimetro.ToString("0. ##");
                     label18.Text = hexagono.Area.ToString("0. ##");
+                    hexagono.Creado = true;
                 }
             }
         }

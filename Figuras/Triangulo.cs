@@ -17,7 +17,7 @@ namespace trabajoMayo.Figuras
             Puntos = new Point[3];
         }
 
-        public Triangulo(int lado, double area, double perimetro, int altura) : base(lado, area, perimetro)
+        public Triangulo(int lado, double area, double perimetro, bool creado, int altura) : base(lado, area, perimetro, creado)
         {
             this.altura = altura;
             Puntos = new Point[3];
@@ -52,77 +52,105 @@ namespace trabajoMayo.Figuras
 
         public override void MoverArriba(PictureBox pictureBox1)
         {
-            if (Puntos[0].Y - 40 < 0)
+            if (Creado == false)
             {
-                MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aun no ha creado el triangulo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Graphics papel;
-                papel = pictureBox1.CreateGraphics();
-                papel.Clear(Color.FromArgb(191, 205, 219));
-                Pen lapiz = new Pen(Color.Black, 2);
-                Puntos[0].Y -= 40;
-                Puntos[1].Y -= 40;
-                Puntos[2].Y -= 40;
-                papel.DrawPolygon(lapiz, Puntos);
+                if (Puntos[0].Y - 40 < 0)
+                {
+                    MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Graphics papel;
+                    papel = pictureBox1.CreateGraphics();
+                    papel.Clear(Color.FromArgb(191, 205, 219));
+                    Pen lapiz = new Pen(Color.Black, 2);
+                    Puntos[0].Y -= 40;
+                    Puntos[1].Y -= 40;
+                    Puntos[2].Y -= 40;
+                    papel.DrawPolygon(lapiz, Puntos);
+                }
             }
         }
 
         public override void MoverIzquierda(PictureBox pictureBox1)
         {
-            if (Puntos[0].X - 40 < 0)
+            if (Creado == false)
             {
-                MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aun no ha creado el triangulo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Graphics papel;
-                papel = pictureBox1.CreateGraphics();
-                papel.Clear(Color.FromArgb(191, 205, 219));
-                Pen lapiz = new Pen(Color.Black, 2);
-                Puntos[0].X -= 40;
-                Puntos[1].X -= 40;
-                Puntos[2].X -= 40;
-                papel.DrawPolygon(lapiz, Puntos);
+                if (Puntos[1].X - 40 < 0)
+                {
+                    MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Graphics papel;
+                    papel = pictureBox1.CreateGraphics();
+                    papel.Clear(Color.FromArgb(191, 205, 219));
+                    Pen lapiz = new Pen(Color.Black, 2);
+                    Puntos[0].X -= 40;
+                    Puntos[1].X -= 40;
+                    Puntos[2].X -= 40;
+                    papel.DrawPolygon(lapiz, Puntos);
+                }
             }
         }
 
         public override void MoverAbajo(PictureBox pictureBox1)
         {
-            if (Puntos[1].Y + 40 > 220)
+            if (Creado == false)
             {
-                MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aun no ha creado el triangulo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Graphics papel;
-                papel = pictureBox1.CreateGraphics();
-                papel.Clear(Color.FromArgb(191, 205, 219));
-                Pen lapiz = new Pen(Color.Black, 2);
-                Puntos[0].Y += 40;
-                Puntos[1].Y += 40;
-                Puntos[2].Y += 40;
-                papel.DrawPolygon(lapiz, Puntos);
+                if (Puntos[1].Y + 40 > 219)
+                {
+                    MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Graphics papel;
+                    papel = pictureBox1.CreateGraphics();
+                    papel.Clear(Color.FromArgb(191, 205, 219));
+                    Pen lapiz = new Pen(Color.Black, 2);
+                    Puntos[0].Y += 40;
+                    Puntos[1].Y += 40;
+                    Puntos[2].Y += 40;
+                    papel.DrawPolygon(lapiz, Puntos);
+                }
             }
         }
 
         public override void MoverDerecha(PictureBox pictureBox1)
         {
-            if (Puntos[2].X + 40 > 660)
+            if (Creado == false)
             {
-                MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aun no ha creado el triangulo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Graphics papel;
-                papel = pictureBox1.CreateGraphics();
-                papel.Clear(Color.FromArgb(191, 205, 219));
-                Pen lapiz = new Pen(Color.Black, 2);
-                Puntos[0].X += 40;
-                Puntos[1].X += 40;
-                Puntos[2].X += 40;
-                papel.DrawPolygon(lapiz, Puntos);
+                if (Puntos[2].X + 40 > 659)
+                {
+                    MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Graphics papel;
+                    papel = pictureBox1.CreateGraphics();
+                    papel.Clear(Color.FromArgb(191, 205, 219));
+                    Pen lapiz = new Pen(Color.Black, 2);
+                    Puntos[0].X += 40;
+                    Puntos[1].X += 40;
+                    Puntos[2].X += 40;
+                    papel.DrawPolygon(lapiz, Puntos);
+                }
             }
         }
 

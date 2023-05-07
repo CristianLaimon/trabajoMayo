@@ -13,18 +13,21 @@ namespace trabajoMayo.Figuras
             Lado = 0;
             Area = 0;
             Perimetro = 0;
+            Creado = false;
         }
 
-        public Figura(int lado, double area, double perimetro)
+        public Figura(int lado, double area, double perimetro, bool creado)
         {
             this.Lado = lado;
             this.Area = area;
             this.Perimetro = perimetro;
+            this.Creado = creado;
         }
 
         public int Lado { get; set; }
         public double Area { get; set; }
         public double Perimetro { get ; set ; }
+        public bool Creado { get; set; }
 
         public abstract double CalcularArea();
         
