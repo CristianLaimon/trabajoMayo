@@ -8,27 +8,23 @@ namespace trabajoMayo.Figuras
 {
     internal abstract class Figura
     {
-        private int lado;
-        private double area;
-        private double perimetro;
-
         public Figura()
         {
-            lado = 0;
-            area = 0;
-            perimetro = 0;
+            Lado = 0;
+            Area = 0;
+            Perimetro = 0;
         }
 
         public Figura(int lado, double area, double perimetro)
         {
-            this.lado = lado;
-            this.area = area;
-            this.perimetro = perimetro;
+            this.Lado = lado;
+            this.Area = area;
+            this.Perimetro = perimetro;
         }
 
-        public int Lado { get => lado; set => lado = value; }
-        public double Area { get => area; set => area = value; }
-        public double Perimetro { get => perimetro; set => perimetro = value; }
+        public int Lado { get; set; }
+        public double Area { get; set; }
+        public double Perimetro { get ; set ; }
 
         public abstract double CalcularArea();
 
@@ -36,7 +32,7 @@ namespace trabajoMayo.Figuras
         
         public abstract void DibujarPoligono(PictureBox pictureBox1);
 
-        public abstract void Mover(PictureBox pictureBox1, int lado);
+        public abstract void MoverArriba(PictureBox pictureBox1, int lado);
 
         public abstract void MoverIzquierda(PictureBox pictureBox1, int lado);
 

@@ -124,8 +124,8 @@ namespace trabajoMayo
                     Triangulo triangulo = new Triangulo();
                     triangulo.Lado = (int)numericUpDown1.Value;
                     triangulo.DibujarPoligono(pictureBox1);
-                    triangulo.CalcularArea((int)numericUpDown1.Value);
-                    triangulo.CalcularPerimetro((int)numericUpDown1.Value);
+                    triangulo.CalcularArea();
+                    triangulo.CalcularPerimetro();
                     label5.Text = triangulo.Perimetro.ToString("0. ##");
                     label4.Text = triangulo.Area.ToString(("0. ##"));
                 }
@@ -147,10 +147,12 @@ namespace trabajoMayo
                     else
                     {
                         Rombo rombo = new Rombo();
-                        rombo.DibujarPoligono(pictureBox1, (int)numericUpDown2.Value, (int)numericUpDown3.Value);
-                        rombo.CalcularArea((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        rombo.DiagonalMayor = (int)numericUpDown2.Value;
+                        rombo.DiagonalMenor = (int)numericUpDown3.Value;
+                        rombo.DibujarPoligono(pictureBox1);
+                        rombo.CalcularArea();
                         label8.Text = rombo.Area.ToString("0. ##");
-                        rombo.CalcularPerimetro((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+                        rombo.CalcularPerimetro();
                         label9.Text = rombo.Perimetro.ToString("0. ##");
                     }
                 }
@@ -166,11 +168,15 @@ namespace trabajoMayo
                 else
                 {
                     Trapecio trapecio = new Trapecio();
+                    trapecio.BaseMayor = (int)numericUpDown4.Value;
+                    trapecio.BaseMenor = (int)numericUpDown5.Value;
+                    trapecio.Altura = (int)numericUpDownTrapecioAltura.Value;
+
                     if ((int)numericUpDown4.Value >= (int)numericUpDown5.Value)
                     {
-                        trapecio.DibujarPoligono(pictureBox1, (int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
-                        trapecio.CalcularPerimetro((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
-                        trapecio.CalcularArea((int)numericUpDown4.Value, (int)numericUpDown5.Value, (int)numericUpDownTrapecioAltura.Value);
+                        trapecio.DibujarPoligono(pictureBox1);
+                        trapecio.CalcularPerimetro();
+                        trapecio.CalcularArea();
                         labelTrapecioArea.Text = trapecio.Area.ToString();
                         labelTrapecioPerimetro.Text = trapecio.Perimetro.ToString();
                     }
@@ -191,10 +197,11 @@ namespace trabajoMayo
                 else
                 {
                     Hexagono hexagono = new Hexagono();
-                    hexagono.DibujarPoligono(pictureBox1, (int)numericUpDown6.Value);
-                    hexagono.CalcularPerimetro((int)numericUpDown6.Value);
+                    hexagono.Lado = (int)numericUpDown6.Value;
+                    hexagono.DibujarPoligono(pictureBox1);
+                    hexagono.CalcularPerimetro();
                     label19.Text = hexagono.Perimetro.ToString("0. ##");
-                    hexagono.CalcularArea((int)numericUpDown6.Value);
+                    hexagono.CalcularArea();
                     label18.Text = hexagono.Area.ToString("0. ##");
                 }
             }

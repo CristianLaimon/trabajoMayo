@@ -28,7 +28,7 @@ namespace trabajoMayo.Figuras
 
         public override double CalcularArea()
         {
-            Area = (diagonalMayor * diagonalMenor) / 2;
+            Area = (diagonalMayor * diagonalMenor / 2);
             return Area;
         }
 
