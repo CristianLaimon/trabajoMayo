@@ -143,7 +143,7 @@ namespace trabajoMayo.Figuras
             }
             else
             {
-                if (Puntos[3].X + 40 > 660)
+                if (Puntos[3].X + 40 > 795)
                 {
                     MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

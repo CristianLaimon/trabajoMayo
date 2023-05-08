@@ -166,7 +166,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(65, 336);
+            this.groupBox2.Location = new System.Drawing.Point(109, 326);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -254,7 +254,7 @@
             this.groupBox3.Controls.Add(this.numericUpDown2);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(238, 336);
+            this.groupBox3.Location = new System.Drawing.Point(282, 326);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -379,7 +379,7 @@
             this.groupBox4.Controls.Add(this.numericUpDownTrapecioBaseMenor);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Location = new System.Drawing.Point(463, 336);
+            this.groupBox4.Location = new System.Drawing.Point(507, 326);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -549,7 +549,7 @@
             this.groupBox5.Controls.Add(this.label20);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Location = new System.Drawing.Point(662, 344);
+            this.groupBox5.Location = new System.Drawing.Point(706, 334);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -645,7 +645,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(121, 16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(754, 293);
+            this.pictureBox1.Size = new System.Drawing.Size(798, 293);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.Form1_Load);
@@ -653,7 +653,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(614, 699);
+            this.label23.Location = new System.Drawing.Point(658, 689);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(261, 20);
             this.label23.TabIndex = 3;
@@ -662,7 +662,7 @@
             // button2
             // 
             this.button2.Image = global::trabajoMayo.Properties.Resources.up_arrow1;
-            this.button2.Location = new System.Drawing.Point(374, 593);
+            this.button2.Location = new System.Drawing.Point(418, 583);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(34, 60);
@@ -673,7 +673,7 @@
             // button3
             // 
             this.button3.Image = global::trabajoMayo.Properties.Resources.arrow1;
-            this.button3.Location = new System.Drawing.Point(315, 629);
+            this.button3.Location = new System.Drawing.Point(359, 619);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(51, 40);
@@ -684,7 +684,7 @@
             // button4
             // 
             this.button4.Image = global::trabajoMayo.Properties.Resources.down_arrow1;
-            this.button4.Location = new System.Drawing.Point(374, 661);
+            this.button4.Location = new System.Drawing.Point(418, 651);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(34, 60);
@@ -695,7 +695,7 @@
             // button5
             // 
             this.button5.Image = global::trabajoMayo.Properties.Resources.right_arrow1;
-            this.button5.Location = new System.Drawing.Point(415, 629);
+            this.button5.Location = new System.Drawing.Point(459, 619);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(51, 40);
@@ -708,7 +708,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(887, 728);
+            this.ClientSize = new System.Drawing.Size(977, 729);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
