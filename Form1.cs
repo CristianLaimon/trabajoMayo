@@ -226,8 +226,8 @@ namespace trabajoMayo
                                 hexagono.DibujarPoligono(pictureBox1);
                                 hexagono.CalcularArea();
                                 hexagono.CalcularPerimetro();
-                                label17.Text = hexagono.Perimetro.ToString("0. ##");
-                                label16.Text = hexagono.Area.ToString(("0. ##"));
+                                label18.Text = hexagono.Perimetro.ToString("0. ##");
+                                label19.Text = hexagono.Area.ToString(("0. ##"));
                                 hexagono.Creado = true;
                             }
 
