@@ -122,7 +122,7 @@ namespace trabajoMayo.Figuras
             }
             else
             {
-                if (Puntos[1].Y + 40 > 219)
+                if (Puntos[1].Y + 40 > 220)
                 {
                     MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -149,7 +149,7 @@ namespace trabajoMayo.Figuras
             }
             else
             {
-                if (Puntos[2].X + 40 > 659)
+                if (Puntos[2].X + 40 > 660)
                 {
                     MessageBox.Show("Limite alcanzado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
