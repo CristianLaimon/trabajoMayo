@@ -653,7 +653,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(639, 699);
+            this.label23.Location = new System.Drawing.Point(614, 699);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(261, 20);
             this.label23.TabIndex = 3;
